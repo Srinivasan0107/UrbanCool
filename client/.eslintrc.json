@@ -1,0 +1,32 @@
+{
+  "env": { "browser": true, "es2022": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": { "ecmaVersion": 2022, "sourceType": "module", "ecmaFeatures": { "jsx": true } },
+  "plugins": ["react", "react-hooks"],
+  "settings": { "react": { "version": "detect" } },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["src/**/__tests__/**/*.{js,jsx}", "src/test/**/*.{js,jsx}"],
+      "env": { "browser": true, "es2022": true },
+      "globals": {
+        "describe": "readonly",
+        "it": "readonly",
+        "expect": "readonly",
+        "vi": "readonly",
+        "beforeEach": "readonly",
+        "afterEach": "readonly",
+        "beforeAll": "readonly",
+        "afterAll": "readonly"
+      }
+    }
+  ]
+}

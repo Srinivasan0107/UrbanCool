@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline":"#86948a","surface-container-high":"#262a33","primary-fixed-dim":"#4edea3","on-tertiary-container":"#004139","inverse-on-surface":"#2c3039","on-primary-container":"#00422b","on-tertiary-fixed":"#00201c","surface-container-lowest":"#0a0e16","tertiary":"#4fdbc8","tertiary-fixed-dim":"#4fdbc8","surface-tint":"#4edea3","on-tertiary":"#003731","surface-dim":"#0f131c","tertiary-container":"#0db6a4","on-primary-fixed-variant":"#005236","background":"#0f131c","error":"#ffb4ab","on-surface-variant":"#bbcabf","primary":"#4edea3","secondary-fixed":"#ffddb8","secondary":"#ffb95f","inverse-surface":"#dfe2ee","on-secondary-fixed":"#2a1700","tertiary-fixed":"#71f8e4","on-background":"#dfe2ee","on-secondary-fixed-variant":"#653e00","surface-variant":"#31353e","on-error":"#690005","on-tertiary-fixed-variant":"#005048","secondary-fixed-dim":"#ffb95f","primary-fixed":"#6ffbbe","on-primary":"#003824","on-surface":"#dfe2ee","surface-bright":"#353942","surface-container-highest":"#31353e","on-secondary":"#472a00","on-error-container":"#ffdad6","on-primary-fixed":"#002113","inverse-primary":"#006c49","surface-container-low":"#181c24","on-secondary-container":"#5b3800","secondary-container":"#ee9800","surface":"#0f131c","outline-variant":"#3c4a42","error-container":"#93000a","primary-container":"#10b981","surface-container":"#1c2028"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-2xl":"3rem","space-2xs":"0.125rem","margin-desktop":"2.5rem","space-xl":"2rem","margin-tablet":"1.5rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.5rem","margin":"1rem","space-md":"1rem","gutter":"1rem"},"fontFamily":{"body-sm":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-mono-stat":["Inter"],"metric-display":["Inter"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"label-caps":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-mono-stat":["0.8125rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"500"}],"metric-display":["2rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.03em","fontWeight":"800"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-2xl z-50 shadow-[0_1px_16px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="UrbanCool Platform Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WiYUsO4mCkrpnCPCVoWOxkizdzP2FHnCc6_cXnvCBYrlpx8SABFgIeq8jtQLygwBGDYPhgMQBwjELyrF8kA6cW299uN_HWc4f9PNhh9VF4iLUxmPNr61W2GB-gq8i0RJz0AZSRd5a0V_2J37dtL9mCt45qshlM-vyPIa96dNSLA5NJB6qNBjajhxs45DtiaFD62TzS0o7GieIKe4VzO7u5nN0GRy-gDbovyaPgyIt2pM09gYzBbPo-apI"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">UrbanCool</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high/60 shadow-[inset_0_0_8px_rgba(78,222,163,0.1)]"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Telemetry: Live Sync • 84 Node Clusters</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-space-2xs rounded-full bg-surface-container-lowest/90" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="gis-telemetry-dashboard" href="#">Planner GIS Dashboard</a><a aria-current="page" class="px-space-md py-space-xs transition-all bg-surface-container text-primary font-bold rounded-lg" data-path="cooling-initiative-tracker" href="#">Cooling Initiatives</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="citizen-heat-advisory" href="#">Citizen Advisory</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="sensor-network-management" href="#">Sensor Mesh</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-error-container/20 shadow-[0_0_12px_rgba(255,180,171,0.15)]"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span><span class="font-label-caps text-label-caps uppercase font-semibold text-error">Tier 3 Heat Advisory</span></div><div class="hidden md:flex flex-col text-right font-label-mono-stat text-label-mono-stat"><span class="text-on-surface">14:26:08 UTC</span><span class="font-body-sm text-body-sm text-on-surface-variant">Ward 07 • Central Core</span></div><div class="flex items-center gap-space-xs pl-space-xs"><div class="relative flex items-center justify-center p-space-2xs rounded-full bg-surface-container-high ring-1 ring-primary/40"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYo7zi-C-yoI8mRae37a53JL6djoznqXAKEf-YFyLPO4tpoEGjGHHUCMkZ2YjtVXeVXJ2Rr1aa2V0ZUYZYbL18mLZTVLHpxyecqOX5GCpYsxcb4F46awPYEEnL4wi2T9t7BFsJyFdOw5kSwwNun3_EzUkSGjLXfLelU18ljZ5VGod_7natK74o7tpj1ojOx47YYPlzVdJUHiT-c9GPPt4BtfU1HqC-sz9Y_q5Ul2lfSxcqYtg0Oyj_"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface-dim"></span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest/70 backdrop-blur-xl z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg px-space-md"><div class="flex items-center justify-between px-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest">Mission Telemetry</span><span class="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-high text-tertiary">NODE VERIFIED</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="gis-telemetry-dashboard" href="#"><span class="material-symbols-outlined text-primary text-xl">public</span><span class="font-body-sm text-body-sm">GIS Thermal Twin</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-surface-container text-primary font-bold rounded-lg" data-path="cooling-initiative-tracker" href="#"><span class="material-symbols-outlined text-tertiary text-xl">forest</span><span class="font-body-sm text-body-sm">Cooling Corridors</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sensor-network-management" href="#"><span class="material-symbols-outlined text-secondary text-xl">sensors</span><span class="font-body-sm text-body-sm">Microclimate Grid</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="citizen-heat-advisory" href="#"><span class="material-symbols-outlined text-error text-xl">warning</span><span class="font-body-sm text-body-sm">Emergency Alerts</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="urban-climate-analytics" href="#"><span class="material-symbols-outlined text-on-surface-variant text-xl">analytics</span><span class="font-body-sm text-body-sm">Climatic Scenarios</span></a></nav></div><div class="px-space-md"><div class="p-space-md rounded-xl bg-surface-container-low/80 backdrop-blur-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-secondary font-bold uppercase">Canopy Delta</span><span class="font-label-mono-stat text-label-mono-stat text-on-surface font-semibold">-3.4°C</span></div><div class="w-full h-1 rounded-full bg-surface-container-highest overflow-hidden"><div class="h-full bg-primary w-3/4"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Target: Ward 07 Mist Rails</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-gutter-desktop py-space-xl flex flex-col gap-space-xl">
+<!-- Top Bar: Header & Spatial Breadcrumb -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm text-tertiary">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Resilience Deployment Vector // Rev 4.12</span>
+<span class="text-surface-variant">•</span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">Ward 01 - 12 Municipal Matrix</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+          Municipal Cooling Initiative Tracker & Resilience Impact
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Real-time telemetry validation and surface albedo tracking across municipal capital interventions. Measuring direct thermal dissipation against the baseline urban heat island (UHI) index.
+        </p>
+</div>
+<!-- Quick Telemetry Snapshot Pill Group -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-xs rounded-xl shadow-lg">
+<div class="flex flex-col px-space-md py-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Aggregated Sink</span>
+<span class="font-metric-display text-metric-display text-primary font-bold tracking-tight">-4.7°C</span>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div class="flex flex-col px-space-md py-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Capital Deployed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$18.4M</span>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div class="flex flex-col px-space-md py-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-tertiary">Active Area</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-semibold">1.82M m²</span>
+</div>
+</div>
+</div>
+<!-- Status Tabs with Sliding Indicator & Filter Console -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b-0 pb-space-xs">
+<!-- Interactive Sliding Underline Tabs -->
+<div class="relative flex items-center gap-space-sm p-space-2xs bg-surface-container-lowest/80 rounded-xl" id="status-tab-group">
+<div class="absolute bottom-1 top-1 bg-surface-container-high rounded-lg transition-all duration-300 ease-out pointer-events-none shadow-sm" id="tab-indicator"></div>
+<button class="tab-btn relative z-10 px-space-md py-space-xs font-body-sm text-body-sm font-semibold text-primary transition-colors flex items-center gap-space-xs" data-tab="all">
+<span>All Initiatives</span>
+<span class="font-label-mono-stat text-label-mono-stat px-space-xs py-0.5 rounded-full bg-primary/20 text-primary">28</span>
+</button>
+<button class="tab-btn relative z-10 px-space-md py-space-xs font-body-sm text-body-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" data-tab="active">
+<span>Active Construction</span>
+<span class="font-label-mono-stat text-label-mono-stat px-space-xs py-0.5 rounded-full bg-surface-container-highest text-secondary">8</span>
+</button>
+<button class="tab-btn relative z-10 px-space-md py-space-xs font-body-sm text-body-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" data-tab="planning">
+<span>Procurement & Planning</span>
+<span class="font-label-mono-stat text-label-mono-stat px-space-xs py-0.5 rounded-full bg-surface-container-highest text-tertiary">6</span>
+</button>
+<button class="tab-btn relative z-10 px-space-md py-space-xs font-body-sm text-body-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" data-tab="completed">
+<span>Completed & Verifying</span>
+<span class="font-label-mono-stat text-label-mono-stat px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface">14</span>
+</button>
+</div>
+<!-- Metric Refresh & Export Group -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all font-body-sm text-body-sm shadow-sm">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Spatial GML</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all font-body-sm text-body-sm font-semibold shadow-md">
+<span class="material-symbols-outlined text-base">add_chart</span>
+<span>Register Intervention</span>
+</button>
+</div>
+</div>
+<!-- Multifaceted Filter Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm bg-surface-container-low/70 backdrop-blur-md p-space-sm rounded-xl shadow-inner">
+<!-- Ward Dropdown Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-lg">location_on</span>
+<div class="flex flex-col w-full min-w-0">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Ward Sector</label>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option class="bg-surface-container-lowest" value="all">All 12 Municipal Wards</option>
+<option class="bg-surface-container-lowest" selected="" value="w07">Ward 07: Central Core Hub</option>
+<option class="bg-surface-container-lowest" value="w03">Ward 03: Industrial Pier & Rail</option>
+<option class="bg-surface-container-lowest" value="w09">Ward 09: Valley Lowlands</option>
+</select>
+</div>
+</div>
+<!-- Intervention Type Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg">nature</span>
+<div class="flex flex-col w-full min-w-0">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Intervention Vector</label>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option class="bg-surface-container-lowest" value="all">All Vectors (Albedo & Canopy)</option>
+<option class="bg-surface-container-lowest" value="canopy">Urban Canopy & Bioswales</option>
+<option class="bg-surface-container-lowest" value="roof">Reflective Cool Roofs</option>
+<option class="bg-surface-container-lowest" value="mist">Micro-Misting Networks</option>
+<option class="bg-surface-container-lowest" value="pavement">Permeable High-Albedo Pavements</option>
+</select>
+</div>
+</div>
+<!-- Impact Rating Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-lg">local_fire_department</span>
+<div class="flex flex-col w-full min-w-0">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Target Impact Tier</label>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option class="bg-surface-container-lowest" value="all">Tier 1 to 4 Reductions</option>
+<option class="bg-surface-container-lowest" value="t4">> 5.0°C Absolute Sink (High Impact)</option>
+<option class="bg-surface-container-lowest" value="t3">3.0°C - 5.0°C Dissipation</option>
+<option class="bg-surface-container-lowest" value="t2">< 3.0°C Localized Shade</option>
+</select>
+</div>
+</div>
+<!-- Sensor Verification Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">cloud_download</span>
+<div class="flex flex-col w-full min-w-0">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Telemetry Status</label>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option class="bg-surface-container-lowest" value="verified">Live IoT Verified (>99% Up)</option>
+<option class="bg-surface-container-lowest" value="sim">CFD Simulated Projections</option>
+<option class="bg-surface-container-lowest" value="calibration">Awaiting Thermocouple Sync</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Temperature Impact Section: Dual-Curve Graph & Delta Celebration Card -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-stretch">
+<!-- Chart Container: 24h Diurnal Baseline vs Post-Intervention -->
+<div class="xl:col-span-8 bg-surface-container-low/90 backdrop-blur-xl p-space-lg rounded-xl shadow-2xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mb-space-md z-10">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Diurnal Cycle Dynamic Trace</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Surface vs Canopy Temperature Trajectory</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aggregated Microclimate Loop • Ward 07 Pilot Precinct (00:00 - 23:59 UTC)</span>
+</div>
+<!-- Curve Legend -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest/80 px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-1 rounded-full bg-secondary shadow-[0_0_8px_rgba(255,185,95,0.6)]"></span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Baseline UHI Trajectory</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-1 rounded-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span>
+<span class="font-label-caps text-label-caps uppercase text-primary">Post-Intervention Curve</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Inline SVG Dual-Curve Graph -->
+<div class="relative w-full h-72 sm:h-80 z-10 flex flex-col justify-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 1000 320">
+<defs>
+<!-- Baseline Gradient Fill (Warm Amber) -->
+<lineargradient id="baselineFill" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffb95f" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#ffb95f" stop-opacity="0.0"></stop>
+</lineargradient>
+<!-- Realized Curve Fill (Cyber Teal / Emerald) -->
+<lineargradient id="realizedFill" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.0"></stop>
+</lineargradient>
+<!-- Line Filters for High Energy Glow -->
+<filter height="140%" id="emeraldGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Horizontal Grid Reference Lines -->
+<line stroke="#31353e" stroke-dasharray="4,4" stroke-opacity="0.6" x1="0" x2="1000" y1="40" y2="40"></line>
+<line stroke="#31353e" stroke-dasharray="4,4" stroke-opacity="0.6" x1="0" x2="1000" y1="110" y2="110"></line>
+<line stroke="#31353e" stroke-dasharray="4,4" stroke-opacity="0.6" x1="0" x2="1000" y1="180" y2="180"></line>
+<line stroke="#31353e" stroke-dasharray="4,4" stroke-opacity="0.6" x1="0" x2="1000" y1="250" y2="250"></line>
+<!-- Y-Axis Labels -->
+<text class="font-label-mono-stat" fill="#86948a" font-size="11" x="10" y="44">42°C (Critical)</text>
+<text class="font-label-mono-stat" fill="#86948a" font-size="11" x="10" y="114">36°C</text>
+<text class="font-label-mono-stat" fill="#86948a" font-size="11" x="10" y="184">30°C</text>
+<text class="font-label-mono-stat" fill="#86948a" font-size="11" x="10" y="254">24°C</text>
+<!-- Peak Solar Noon Highlight Bar -->
+<rect fill="#ffb95f" fill-opacity="0.04" height="260" rx="4" width="120" x="520" y="20"></rect>
+<line stroke="#ffb95f" stroke-dasharray="2,2" stroke-opacity="0.3" x1="580" x2="580" y1="20" y2="280"></line>
+<text class="font-label-caps" fill="#ffb95f" font-size="10" x="585" y="32">SOLAR NOON (14:00)</text>
+<!-- Baseline Trajectory Path Area -->
+<path d="M 50,230 C 180,220 280,180 400,120 C 480,80 540,42 600,45 C 680,50 780,100 880,150 C 930,175 970,205 1000,215 L 1000,300 L 50,300 Z" fill="url(#baselineFill)"></path>
+<!-- Realized Cooling Path Area -->
+<path d="M 50,230 C 180,225 280,195 400,165 C 480,135 540,110 600,112 C 680,120 780,155 880,185 C 930,205 970,225 1000,232 L 1000,300 L 50,300 Z" fill="url(#realizedFill)"></path>
+<!-- Baseline Line (Neon Amber) -->
+<path d="M 50,230 C 180,220 280,180 400,120 C 480,80 540,42 600,45 C 680,50 780,100 880,150 C 930,175 970,205 1000,215" fill="none" stroke="#ffb95f" stroke-linecap="round" stroke-width="3"></path>
+<!-- Realized Line (Cyber Teal / Emerald) -->
+<path d="M 50,230 C 180,225 280,195 400,165 C 480,135 540,110 600,112 C 680,120 780,155 880,185 C 930,205 970,225 1000,232" fill="none" filter="url(#emeraldGlow)" stroke="#4edea3" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Peak Difference Vector Annotation -->
+<line stroke="#4edea3" stroke-dasharray="3,3" stroke-width="2" x1="600" x2="600" y1="45" y2="112"></line>
+<circle cx="600" cy="45" fill="#ffb95f" r="5" stroke="#0f131c" stroke-width="2"></circle>
+<circle cx="600" cy="112" fill="#4edea3" r="5" stroke="#0f131c" stroke-width="2"></circle>
+<!-- Differential Marker Node -->
+<g transform="translate(615, 68)">
+<rect fill="#0a0e16" fill-opacity="0.9" height="24" rx="4" stroke="none" width="95" x="0" y="0"></rect>
+<text class="font-label-mono-stat" fill="#4edea3" font-size="11" font-weight="700" x="6" y="16">Δ -6.0°C SINK</text>
+</g>
+</svg>
+<!-- Timeline X-Axis Ticks -->
+<div class="flex justify-between px-space-md pt-space-xs text-on-surface-variant font-label-mono-stat text-label-mono-stat">
+<span>02:00</span>
+<span>06:00</span>
+<span>10:00</span>
+<span class="text-secondary font-bold">14:00 (Peak)</span>
+<span>18:00</span>
+<span>22:00</span>
+</div>
+</div>
+<!-- Telemetry Correlation Footer inside Chart -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-md border-t-0 bg-surface-container-lowest/50 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-lg">hub</span>
+<span class="font-body-sm text-body-sm text-on-surface">Integrated across 18 Microclimate Towers & Landsat-9 Thermal Infrared Radiometer</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-mono-stat text-label-mono-stat text-on-surface-variant">
+<span>Variance Margin:</span>
+<span class="text-primary font-semibold">±0.28°C (95% CI)</span>
+</div>
+</div>
+</div>
+<!-- Prominent Temperature Delta Celebration Badge & Co-benefits Card -->
+<div class="xl:col-span-4 flex flex-col justify-between p-space-lg rounded-xl bg-gradient-to-b from-surface-container-high via-surface-container to-surface-container-low shadow-2xl relative overflow-hidden">
+<!-- Ambient Decorative Glow -->
+<div class="absolute -right-20 -top-20 w-56 h-56 rounded-full bg-primary/10 blur-2xl"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase px-space-sm py-space-2xs rounded-full bg-primary/10 text-primary font-bold tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-xs">auto_awesome</span> Verified Maximum
+            </span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">WARD 07 CENTRAL</span>
+</div>
+<!-- Giant Delta Counter with Visual Sparkle -->
+<div class="flex flex-col gap-space-2xs mt-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="material-symbols-outlined text-display-lg text-primary animate-bounce">arrow_downward</span>
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface tracking-tighter" id="animated-delta">6.0°C</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Peak Surface Heat Reduction</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Recorded during July Heat Dome simulation across 45,000 sq ft photovoltaic canopy & cool pavement envelope.
+            </p>
+</div>
+<!-- Co-Benefit Key Metric Gauges -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- HVAC Metric -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest/80">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Grid Load Reduction</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Reduced District Chiller Demand</span>
+</div>
+</div>
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-secondary">$420k/yr</span>
+</div>
+<!-- Urban Canopy Oxygenation Metric -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest/80">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-lg">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Carbon Sequestration Eq.</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Equivalent Mature Trees</span>
+</div>
+</div>
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-tertiary">+340 Trees</span>
+</div>
+<!-- Wet Bulb Safety -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest/80">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">medical_services</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Health Resilience</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Vulnerable Citizen Buffer Zone</span>
+</div>
+</div>
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-primary">8,400 Pop</span>
+</div>
+</div>
+</div>
+<!-- Audit & Verification Badge -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between border-t-0 text-on-surface-variant text-label-mono-stat font-label-mono-stat">
+<span class="flex items-center gap-space-2xs text-primary">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>EPD Sensor #9104-OK</span>
+</span>
+<span>Sync: 3 mins ago</span>
+</div>
+</div>
+</div>
+<!-- 3D Tilt-on-Hover Initiative Cards Grid -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">view_kanban</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Prioritized Interventions Matrix</h2>
+</div>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">Interactive 3D Perspective Enabled</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg [perspective:1000px]">
+<!-- CARD 1: Central Plaza Reflective Cool Roof -->
+<div class="initiative-tilt-card bg-surface-container-low/80 backdrop-blur-xl p-space-md rounded-xl shadow-xl flex flex-col justify-between transition-transform duration-200 ease-out will-change-transform group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card Header Badge & Type -->
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase px-space-xs py-space-2xs rounded bg-primary/10 text-primary font-bold">
+                Completed • Active
+              </span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">INIT-0104</span>
+</div>
+<!-- Visual Context Image Placeholder -->
+<div class="w-full h-32 rounded-lg overflow-hidden relative shadow-inner">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High angle shot of an ultra modern municipal building roof with bright reflective white cool-roof coating and sleek geometric photovoltaic canopies overlooking a dense city core with vibrant cyan and emerald solar panels under bright summer sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARmPSS8EHAa5oXd-hgAzpXO6F4PAsUN33ZNtIj8YWyfdCUcAIr6F5ovXXaKKVIII-ZJDNBnLyJH6c4RLB5Vrz73nsyQKwIBAIJi_rTf1o6p2gxQyQKhwHksgWgBG9AXAvQctZHpPV4R2kn3Z1vhKQAPZf5s-Qsx3cDC79x6vLPJrePCaLgMCDN5ACxwEGhbegrqNkM3m94PObRenP6Q0IF2qKovH1ZifyE08r_iF4qeh1xgNZhNtTI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-lowest/90 text-primary font-bold">Albedo: 0.88</span>
+</div>
+</div>
+<!-- Title & Summary -->
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+                Central Plaza Reflective Cool Roof & PV Canopy
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                High-emittance titanium dioxide membrane combined with elevated agrivoltaic shading pergolas.
+              </p>
+</div>
+<!-- Impact Metrics -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Measured Delta</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">-5.8°C</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Capital Scale</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$1.2M</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono-stat text-label-mono-stat px-space-2xs">
+<span>Area: 45,000 sq ft</span>
+<span class="text-tertiary">Eq: +120 Trees</span>
+</div>
+</div>
+<!-- Progress Bar at 100% -->
+<div class="flex flex-col gap-space-2xs pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant uppercase">
+<span>Cooling Dispatch</span>
+<span class="text-primary font-bold">100%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full w-full shadow-[0_0_10px_rgba(78,222,163,0.8)]"></div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Metro Arterial Green Corridor -->
+<div class="initiative-tilt-card bg-surface-container-low/80 backdrop-blur-xl p-space-md rounded-xl shadow-xl flex flex-col justify-between transition-transform duration-200 ease-out will-change-transform group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase px-space-xs py-space-2xs rounded bg-tertiary/10 text-tertiary font-bold">
+                Phase 2 Planting
+              </span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">INIT-0288</span>
+</div>
+<!-- Visual Context Image Placeholder -->
+<div class="w-full h-32 rounded-lg overflow-hidden relative shadow-inner">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dense multi-tier urban boulevard lined with lush high-transpiration native oak trees, permeable bio-swale rain gardens, and pedestrians in a contemporary climate-resilient green city street with dark asphalt and vibrant foliage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0yPrtKlZ66vullADJj1O9vhE4zyCEhAZqPdInNt_SkPCcQk55AtCqb9WbuS8OqWC_rolGV4mniORJ8hbxgM554sKUPfP5UNHdBDL0Xq0zfCH5z2nfJJTYbWGe6WmidFVfTjjCes7LpngKCVRC6iLG6IRRvwMzN9MUfLjVtksAgAFd3_RPoMc30GAtSGeAbfmYOfeUJ4BAR9yE10ExITVBeX49qWaAksfMBbfGsz6StYI6JJiIWKOq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-lowest/90 text-tertiary font-bold">Transpiration: 92%</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-tertiary transition-colors">
+                Metro Arterial Green Corridor & Bioswales
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                4-kilometer continuous street tree canopy integrated with subsurface storm run-off cooling reservoirs.
+              </p>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Projected Delta</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">-4.2°C</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Storm Retention</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">85k gal</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono-stat text-label-mono-stat px-space-2xs">
+<span>Arterial: 4.2 km length</span>
+<span class="text-tertiary">380 Native Trees</span>
+</div>
+</div>
+<!-- Progress Bar at 68% -->
+<div class="flex flex-col gap-space-2xs pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant uppercase">
+<span>Construction Milestones</span>
+<span class="text-tertiary font-bold">68%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-2/3 shadow-[0_0_10px_rgba(79,219,200,0.6)]"></div>
+</div>
+</div>
+</div>
+<!-- CARD 3: Solar-Powered Micro-Misting Stations -->
+<div class="initiative-tilt-card bg-surface-container-low/80 backdrop-blur-xl p-space-md rounded-xl shadow-xl flex flex-col justify-between transition-transform duration-200 ease-out will-change-transform group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase px-space-xs py-space-2xs rounded bg-secondary/10 text-secondary font-bold">
+                Standby • Tier 3
+              </span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">INIT-0342</span>
+</div>
+<!-- Visual Context Image Placeholder -->
+<div class="w-full h-32 rounded-lg overflow-hidden relative shadow-inner">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural minimalist misting cooling tower in an urban pedestrian plaza spraying fine microscopic water vapor in a cool cyan cloud, surrounded by commuters seeking shelter from intense heat, modern industrial telemetry aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0lUD7KzmAgPtoLSdhw9Rx0Bs0p9SJwzBOLJ2G50139wx58aEkM0MAlVt6RkxtJmIxLkQ4lzp11iwOJqCTqQ_IePDAnpp1f4P-02cPQoOAZRAQCZ80niklT1aoU9LPEgcA4D1v_Pd-VWlUlfOytsLEBwvz8jCKFKzgf3Jl2Oplbb8V7ioGZB-xiQAj74UKCDc9yyH1fX2eEpmSZRYXMFpoxo3suF99sFTDBGdyA1YtvcGX047k4xxL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-lowest/90 text-secondary font-bold">12 Active Nodes</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                Autonomous Solar Micro-Misting Arrays
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Pressure-atomized evaporative chillers triggered automatically when wet-bulb globe temperature exceeds 31°C.
+              </p>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Wet-Bulb Sink</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">-3.5°C</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Micro Radius</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">50m Envelope</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono-stat text-label-mono-stat px-space-2xs">
+<span>Water Eff: 98.4%</span>
+<span class="text-secondary">Solar Buff: 48 kWh</span>
+</div>
+</div>
+<!-- Progress Bar at 90% Readiness -->
+<div class="flex flex-col gap-space-2xs pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant uppercase">
+<span>Telemetry Tele-Control</span>
+<span class="text-secondary font-bold">90%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[90%] shadow-[0_0_10px_rgba(255,185,95,0.6)]"></div>
+</div>
+</div>
+</div>
+<!-- CARD 4: Permeable High-Albedo Asphalt Hub -->
+<div class="initiative-tilt-card bg-surface-container-low/80 backdrop-blur-xl p-space-md rounded-xl shadow-xl flex flex-col justify-between transition-transform duration-200 ease-out will-change-transform group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-bold">
+                Procurement Approved
+              </span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">INIT-0419</span>
+</div>
+<!-- Visual Context Image Placeholder -->
+<div class="w-full h-32 rounded-lg overflow-hidden relative shadow-inner">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Civil engineering project resurfacing a massive metropolitan logistics terminal with light grey reflective porous permeable pavement, heavy autonomous construction machinery under clear sunlight, sharp technical contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwhGy5bFZiRx7gxHfM5P57Z6ldPngw8yHcyXnV2fhPg_paSJjx7PnRhWmUiI_h8mRkefgjrgvh10F-nOuxb0wAXNeD9qbeVcS_Ul0r9iC1zc3ilUrHK5iDG71zEu_ZBwwdAVAx6jzDRLxjGjAewRC_Jw-TNZiTaTnRjAU1Mlm18tOynVN2Yh1pDT2SqFtnDOG98DvCOXlIlEN3UA7ynxtIN7D2NLmmDp4EJ7o1h82fN2ugMIiXkIfc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-lowest/90 text-on-surface font-bold">Target Albedo: 0.45</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+                Albedo Permeable Asphalt - Logistics Hub
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Light-colored polymer modified binder asphalt replacing traditional blacktop over 120,000 m² freight terminal.
+              </p>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Est. Dissipation</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">-3.1°C</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Total Footprint</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">120k m²</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono-stat text-label-mono-stat px-space-2xs">
+<span>Tender: Awarded</span>
+<span class="text-on-surface-variant">Start: Q3 2025</span>
+</div>
+</div>
+<!-- Progress Bar at 22% -->
+<div class="flex flex-col gap-space-2xs pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant uppercase">
+<span>Procurement Phase</span>
+<span class="text-on-surface font-bold">22%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-surface-container-highest rounded-full w-[22%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Intervention ROI & Urban Heat Mitigation Simulator -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-lg rounded-xl shadow-2xl flex flex-col gap-space-lg relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">tune</span>
+<span class="font-label-caps text-label-caps uppercase text-tertiary font-bold tracking-widest">Digital Twin Scenario Engine</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Intervention ROI & Dynamic Mitigation Simulator</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+            Simulate capital deployment trade-offs between canopy density and cool roof coverage to model resulting microclimate depression and energy savings.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-all" id="reset-sim-btn">
+            Reset to Baseline
+          </button>
+<button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-container transition-all shadow-md">
+            Push Scenario to Council
+          </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Sliders Interactive Control Column -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg p-space-md bg-surface-container-lowest/80 rounded-xl">
+<!-- Slider 1: Target Canopy -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">forest</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Target Green Canopy Coverage</span>
+</div>
+<span class="font-label-mono-stat text-label-mono-stat text-primary font-bold text-base" id="canopy-val-display">32%</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" id="canopy-slider" max="60" min="10" type="range" value="32"/>
+<div class="flex justify-between font-label-mono-stat text-label-mono-stat text-on-surface-variant">
+<span>Current (18%)</span>
+<span>Regional Target (30%)</span>
+<span>Max Saturation (60%)</span>
+</div>
+</div>
+<!-- Slider 2: Cool Roof Adoption -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg">roofing</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Cool Roof Ordinance Adoption</span>
+</div>
+<span class="font-label-mono-stat text-label-mono-stat text-secondary font-bold text-base" id="roof-val-display">45%</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary focus:outline-none" id="roof-slider" max="90" min="5" type="range" value="45"/>
+<div class="flex justify-between font-label-mono-stat text-label-mono-stat text-on-surface-variant">
+<span>Baseline (12%)</span>
+<span>Commercial Mandate (50%)</span>
+<span>Full Retrofit (90%)</span>
+</div>
+</div>
+<!-- Real-Time Projected Heat Map Matrix -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Simulated Spatial Heat Anomaly Grid (Ward 07)</span>
+<div class="grid grid-cols-6 gap-1.5 p-space-xs rounded-lg bg-surface-container-low" id="sim-grid">
+<!-- Cells updated via javascript -->
+<div class="h-6 rounded bg-secondary/80 flex items-center justify-center font-label-caps text-label-caps text-on-secondary font-bold">40°</div>
+<div class="h-6 rounded bg-secondary/60 flex items-center justify-center font-label-caps text-label-caps text-on-secondary font-bold">39°</div>
+<div class="h-6 rounded bg-primary/40 flex items-center justify-center font-label-caps text-label-caps text-on-surface font-bold">34°</div>
+<div class="h-6 rounded bg-primary/70 flex items-center justify-center font-label-caps text-label-caps text-on-primary font-bold">32°</div>
+<div class="h-6 rounded bg-primary/90 flex items-center justify-center font-label-caps text-label-caps text-on-primary font-bold">31°</div>
+<div class="h-6 rounded bg-secondary/50 flex items-center justify-center font-label-caps text-label-caps text-on-secondary font-bold">38°</div>
+<div class="h-6 rounded bg-secondary/70 flex items-center justify-center font-label-caps text-label-caps text-on-secondary font-bold">39°</div>
+<div class="h-6 rounded bg-primary/50 flex items-center justify-center font-label-caps text-label-caps text-on-surface font-bold">33°</div>
+<div class="h-6 rounded bg-primary flex items-center justify-center font-label-caps text-label-caps text-on-primary font-bold">30°</div>
+<div class="h-6 rounded bg-primary flex items-center justify-center font-label-caps text-label-caps text-on-primary font-bold">29°</div>
+<div class="h-6 rounded bg-primary/60 flex items-center justify-center font-label-caps text-label-caps text-on-surface font-bold">33°</div>
+<div class="h-6 rounded bg-secondary/70 flex items-center justify-center font-label-caps text-label-caps text-on-secondary font-bold">39°</div>
+</div>
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant pt-1">
+<span>Hotspot (>41°C)</span>
+<span class="flex items-center gap-1">
+<span class="w-3 h-2 rounded bg-secondary"></span>
+<span class="w-3 h-2 rounded bg-primary/40"></span>
+<span class="w-3 h-2 rounded bg-primary"></span>
+</span>
+<span>Optimal Climate Oasis (<30°C)</span>
+</div>
+</div>
+</div>
+<!-- Simulation Output Readout Display -->
+<div class="lg:col-span-6 flex flex-col justify-between h-full gap-space-md p-space-lg rounded-xl bg-gradient-to-br from-surface-container via-surface-container-high to-surface-container-lowest">
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-tertiary font-bold">Scenario Projection Output</span>
+<div class="flex items-baseline justify-between pt-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Projected Heat Island Attenuation:</span>
+<span class="font-display-lg text-display-lg font-bold text-primary tracking-tight" id="projected-sink-display">-4.4°C</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full bg-primary transition-all duration-300 w-3/5" id="sim-progress-bar"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-lowest/70">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Required Municipal CapEx</span>
+<span class="font-metric-display text-metric-display font-bold text-on-surface" id="capex-display">$9.8M</span>
+<span class="font-label-mono-stat text-label-mono-stat text-tertiary">3.4 Year Payback Period</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-lowest/70">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Annual Grid Savings</span>
+<span class="font-metric-display text-metric-display font-bold text-secondary" id="savings-display">$1.84M/yr</span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant">Peak Demand -24MW</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-primary/10 border-0">
+<span class="material-symbols-outlined text-primary text-xl">recommend</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+<strong class="text-primary font-semibold">Recommendation:</strong> At 32% Canopy + 45% Cool Roof, Ward 07 eliminates its Level 3 Extreme Heat Emergency classification for typical 38°C ambient summer spikes.
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Tab Sliding Indicator
+  (function() {
+    const tabGroup = document.getElementById('status-tab-group');
+    const indicator = document.getElementById('tab-indicator');
+    const buttons = tabGroup ? tabGroup.querySelectorAll('.tab-btn') : [];
+
+    function updateIndicator(activeBtn) {
+      if (!indicator || !activeBtn) return;
+      indicator.style.left = activeBtn.offsetLeft + 'px';
+      indicator.style.width = activeBtn.offsetWidth + 'px';
+    }
+
+    if (buttons.length > 0) {
+      updateIndicator(buttons[0]);
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.classList.remove('text-primary');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('text-primary');
+          btn.classList.remove('text-on-surface-variant');
+          updateIndicator(btn);
+        });
+      });
+      window.addEventListener('resize', () => {
+        const currentActive = tabGroup.querySelector('.tab-btn.text-primary') || buttons[0];
+        updateIndicator(currentActive);
+      });
+    }
+  })();
+
+  // 3D Tilt-on-Hover for Cards
+  (function() {
+    const cards = document.querySelectorAll('.initiative-tilt-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -5;
+        const rotateY = ((x - centerX) / centerX) * 5;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      });
+    });
+  })();
+
+  // Interactive Intervention Simulator Calculations
+  (function() {
+    const canopySlider = document.getElementById('canopy-slider');
+    const roofSlider = document.getElementById('roof-slider');
+    const canopyDisplay = document.getElementById('canopy-val-display');
+    const roofDisplay = document.getElementById('roof-val-display');
+    const sinkDisplay = document.getElementById('projected-sink-display');
+    const capexDisplay = document.getElementById('capex-display');
+    const savingsDisplay = document.getElementById('savings-display');
+    const simProgressBar = document.getElementById('sim-progress-bar');
+    const resetBtn = document.getElementById('reset-sim-btn');
+
+    function calculateImpact() {
+      if (!canopySlider || !roofSlider) return;
+      const canopy = parseInt(canopySlider.value, 10);
+      const roof = parseInt(roofSlider.value, 10);
+
+      canopyDisplay.textContent = canopy + '%';
+      roofDisplay.textContent = roof + '%';
+
+      // Empirical reduction formula based on urban albedo + evapo-transpiration
+      const sink = (canopy * 0.08) + (roof * 0.045);
+      sinkDisplay.textContent = '-' + sink.toFixed(1) + '°C';
+
+      // CapEx in Millions
+      const capex = (canopy * 0.18) + (roof * 0.09);
+      capexDisplay.textContent = '$' + capex.toFixed(1) + 'M';
+
+      // Yearly HVAC savings in Millions
+      const savings = (sink * 0.42);
+      savingsDisplay.textContent = '$' + savings.toFixed(2) + 'M/yr';
+
+      // Progress bar fill percentage relative to theoretical max of 8°C sink
+      const progressPercent = Math.min(100, Math.round((sink / 7.5) * 100));
+      simProgressBar.style.width = progressPercent + '%';
+    }
+
+    if (canopySlider && roofSlider) {
+      canopySlider.addEventListener('input', calculateImpact);
+      roofSlider.addEventListener('input', calculateImpact);
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        canopySlider.value = 32;
+        roofSlider.value = 45;
+        calculateImpact();
+      });
+    }
+
+    calculateImpact();
+  })();
+</script></main></div></body></html>

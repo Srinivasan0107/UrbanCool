@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* LIGHT / WHITE MODE (crisp slate & clean white surfaces) */
+  --color-surface: 248 250 252;                 /* #f8fafc slate-50 */
+  --color-surface-dim: 241 245 249;             /* #f1f5f9 slate-100 */
+  --color-surface-bright: 255 255 255;          /* #ffffff pure white */
+  --color-surface-container-lowest: 255 255 255; /* #ffffff crisp cards */
+  --color-surface-container-low: 248 250 252;    /* #f8fafc */
+  --color-surface-container: 241 245 249;        /* #f1f5f9 */
+  --color-surface-container-high: 226 232 240;   /* #e2e8f0 */
+  --color-surface-container-highest: 203 213 225;/* #cbd5e1 */
+  --color-on-surface: 15 23 42;                 /* #0f172a slate-900 */
+  --color-on-surface-variant: 71 85 105;        /* #475569 slate-600 */
+  --color-inverse-surface: 15 19 28;
+  --color-inverse-on-surface: 248 250 252;
+  --color-outline: 148 163 184;                 /* #94a3b8 slate-400 */
+  --color-outline-variant: 226 232 240;         /* #e2e8f0 slate-200 border */
+  --color-surface-tint: 5 150 105;
+  --color-primary: 5 150 105;                   /* #059669 emerald-600 */
+  --color-on-primary: 255 255 255;
+  --color-primary-container: 209 250 229;       /* #d1fae5 emerald-100 */
+  --color-on-primary-container: 4 120 87;       /* #047857 emerald-800 */
+  --color-inverse-primary: 78 222 163;
+  --color-secondary: 217 119 6;                 /* #d97706 amber-600 */
+  --color-on-secondary: 255 255 255;
+  --color-secondary-container: 254 243 199;
+  --color-on-secondary-container: 146 64 14;
+  --color-tertiary: 13 148 136;                 /* #0d9488 teal-600 */
+  --color-on-tertiary: 255 255 255;
+  --color-tertiary-container: 204 251 241;
+  --color-on-tertiary-container: 17 94 89;
+  --color-error: 220 38 38;                     /* #dc2626 red-600 */
+  --color-on-error: 255 255 255;
+  --color-error-container: 254 226 226;         /* #fee2e2 red-100 */
+  --color-on-error-container: 153 27 27;
+  --color-primary-fixed: 16 185 129;
+  --color-primary-fixed-dim: 5 150 105;
+  --color-on-primary-fixed: 255 255 255;
+  --color-on-primary-fixed-variant: 4 120 87;
+  --color-secondary-fixed: 245 158 11;
+  --color-secondary-fixed-dim: 217 119 6;
+  --color-on-secondary-fixed: 255 255 255;
+  --color-on-secondary-fixed-variant: 146 64 14;
+  --color-tertiary-fixed: 20 184 166;
+  --color-tertiary-fixed-dim: 13 148 136;
+  --color-on-tertiary-fixed: 255 255 255;
+  --color-on-tertiary-fixed-variant: 17 94 89;
+  --color-background: 248 250 252;
+  --color-on-background: 15 23 42;
+  --color-surface-variant: 241 245 249;
+}
+
+html.dark {
+  /* DARK / CYBER-ENVIRONMENTAL MODE */
+  --color-surface: 15 19 28;                    /* #0f131c */
+  --color-surface-dim: 15 19 28;
+  --color-surface-bright: 53 57 66;             /* #353942 */
+  --color-surface-container-lowest: 10 14 22;   /* #0a0e16 */
+  --color-surface-container-low: 24 28 36;      /* #181c24 */
+  --color-surface-container: 28 32 40;          /* #1c2028 */
+  --color-surface-container-high: 38 42 51;     /* #262a33 */
+  --color-surface-container-highest: 49 53 62;  /* #31353e */
+  --color-on-surface: 223 226 238;              /* #dfe2ee */
+  --color-on-surface-variant: 187 202 191;      /* #bbcabf */
+  --color-inverse-surface: 223 226 238;
+  --color-inverse-on-surface: 44 48 57;
+  --color-outline: 134 148 138;                 /* #86948a */
+  --color-outline-variant: 60 74 66;            /* #3c4a42 */
+  --color-surface-tint: 78 222 163;
+  --color-primary: 78 222 163;                  /* #4edea3 */
+  --color-on-primary: 0 56 36;                  /* #003824 */
+  --color-primary-container: 16 185 129;        /* #10b981 */
+  --color-on-primary-container: 0 66 43;        /* #00422b */
+  --color-inverse-primary: 0 108 73;            /* #006c49 */
+  --color-secondary: 255 185 95;                /* #ffb95f */
+  --color-on-secondary: 71 42 0;                /* #472a00 */
+  --color-secondary-container: 238 152 0;       /* #ee9800 */
+  --color-on-secondary-container: 91 56 0;      /* #5b3800 */
+  --color-tertiary: 79 219 200;                 /* #4fdbc8 */
+  --color-on-tertiary: 0 55 49;                 /* #003731 */
+  --color-tertiary-container: 13 182 164;       /* #0db6a4 */
+  --color-on-tertiary-container: 0 65 57;       /* #004139 */
+  --color-error: 255 180 171;                   /* #ffb4ab */
+  --color-on-error: 105 0 5;                    /* #690005 */
+  --color-error-container: 147 0 10;            /* #93000a */
+  --color-on-error-container: 255 218 214;      /* #ffdad6 */
+  --color-primary-fixed: 111 251 190;           /* #6ffbbe */
+  --color-primary-fixed-dim: 78 222 163;
+  --color-on-primary-fixed: 0 33 19;
+  --color-on-primary-fixed-variant: 0 82 54;
+  --color-secondary-fixed: 255 221 184;
+  --color-secondary-fixed-dim: 255 185 95;
+  --color-on-secondary-fixed: 42 23 0;
+  --color-on-secondary-fixed-variant: 101 62 0;
+  --color-tertiary-fixed: 113 248 228;
+  --color-tertiary-fixed-dim: 79 219 200;
+  --color-on-tertiary-fixed: 0 32 28;
+  --color-on-tertiary-fixed-variant: 0 80 72;
+  --color-background: 15 19 28;
+  --color-on-background: 223 226 238;
+  --color-surface-variant: 49 53 62;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-body text-body-md text-on-surface antialiased transition-colors duration-200;
+  }
+}
+
+/* Custom scrollbars adapting to active theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface-container-lowest));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-surface-container-high));
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-surface-container-highest));
+}
+
+/* Light mode shadow enhancements */
+html.light .shadow-2xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+html.light header {
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Leaflet map enhancements & full rendering guarantee */
+.leaflet-container {
+  font-family: inherit !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: transparent !important;
+}
+
+/* Custom thermal tooltip */
+.custom-thermal-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.custom-thermal-tooltip::before {
+  display: none !important;
+}
+
+/* Custom thermal popup */
+.thermal-telemetry-popup .leaflet-popup-content-wrapper {
+  background: rgb(var(--color-surface-container-high)) !important;
+  color: rgb(var(--color-on-surface)) !important;
+  border: 1px solid rgba(var(--color-outline-variant), 0.5) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.35) !important;
+  padding: 0 !important;
+  backdrop-filter: blur(16px);
+}
+.thermal-telemetry-popup .leaflet-popup-tip {
+  background: rgb(var(--color-surface-container-high)) !important;
+}
+.thermal-telemetry-popup .leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline":"#86948a","surface-container-high":"#262a33","primary-fixed-dim":"#4edea3","on-tertiary-container":"#004139","inverse-on-surface":"#2c3039","on-primary-container":"#00422b","on-tertiary-fixed":"#00201c","surface-container-lowest":"#0a0e16","tertiary":"#4fdbc8","tertiary-fixed-dim":"#4fdbc8","surface-tint":"#4edea3","on-tertiary":"#003731","surface-dim":"#0f131c","tertiary-container":"#0db6a4","on-primary-fixed-variant":"#005236","background":"#0f131c","error":"#ffb4ab","on-surface-variant":"#bbcabf","primary":"#4edea3","secondary-fixed":"#ffddb8","secondary":"#ffb95f","inverse-surface":"#dfe2ee","on-secondary-fixed":"#2a1700","tertiary-fixed":"#71f8e4","on-background":"#dfe2ee","on-secondary-fixed-variant":"#653e00","surface-variant":"#31353e","on-error":"#690005","on-tertiary-fixed-variant":"#005048","secondary-fixed-dim":"#ffb95f","primary-fixed":"#6ffbbe","on-primary":"#003824","on-surface":"#dfe2ee","surface-bright":"#353942","surface-container-highest":"#31353e","on-secondary":"#472a00","on-error-container":"#ffdad6","on-primary-fixed":"#002113","inverse-primary":"#006c49","surface-container-low":"#181c24","on-secondary-container":"#5b3800","secondary-container":"#ee9800","surface":"#0f131c","outline-variant":"#3c4a42","error-container":"#93000a","primary-container":"#10b981","surface-container":"#1c2028"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-2xl":"3rem","space-2xs":"0.125rem","margin-desktop":"2.5rem","space-xl":"2rem","margin-tablet":"1.5rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.5rem","margin":"1rem","space-md":"1rem","gutter":"1rem"},"fontFamily":{"body-sm":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-mono-stat":["Inter"],"metric-display":["Inter"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"label-caps":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-mono-stat":["0.8125rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"500"}],"metric-display":["2rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.03em","fontWeight":"800"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-2xl z-50 shadow-[0_1px_16px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="UrbanCool Platform Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WiYUsO4mCkrpnCPCVoWOxkizdzP2FHnCc6_cXnvCBYrlpx8SABFgIeq8jtQLygwBGDYPhgMQBwjELyrF8kA6cW299uN_HWc4f9PNhh9VF4iLUxmPNr61W2GB-gq8i0RJz0AZSRd5a0V_2J37dtL9mCt45qshlM-vyPIa96dNSLA5NJB6qNBjajhxs45DtiaFD62TzS0o7GieIKe4VzO7u5nN0GRy-gDbovyaPgyIt2pM09gYzBbPo-apI"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">UrbanCool</span></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high/60"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Telemetry: Live Sync • 84 Node Clusters</span></div></div><nav class="hidden md:flex items-center gap-space-xs p-space-2xs rounded-full bg-surface-container-lowest/90" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="gis-telemetry-dashboard" href="#">Planner GIS Dashboard</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="cooling-initiative-tracker" href="#">Cooling Initiative Tracker</a><a aria-current="page" class="px-space-md py-space-xs transition-all bg-surface-container text-primary font-bold rounded-lg" data-path="citizen-heat-advisory" href="#">Citizen Advisory View</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="operator-login" href="#">Access & Auth</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-error-container/20 shadow-[0_0_12px_rgba(255,180,171,0.15)]"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span><span class="font-label-caps text-label-caps uppercase font-semibold text-error">Tier 3 Heat Advisory</span></div><div class="flex items-center gap-space-xs pl-space-xs"><div class="relative flex items-center justify-center p-space-2xs rounded-full bg-surface-container-high ring-1 ring-primary/40"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYo7zi-C-yoI8mRae37a53JL6djoznqXAKEf-YFyLPO4tpoEGjGHHUCMkZ2YjtVXeVXJ2Rr1aa2V0ZUYZYbL18mLZTVLHpxyecqOX5GCpYsxcb4F46awPYEEnL4wi2T9t7BFsJyFdOw5kSwwNun3_EzUkSGjLXfLelU18ljZ5VGod_7natK74o7tpj1ojOx47YYPlzVdJUHiT-c9GPPt4BtfU1HqC-sz9Y_q5Ul2lfSxcqYtg0Oyj_"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface-dim"></span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Aura -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-error/15 via-secondary/10 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop py-space-xl flex flex-col gap-space-xl relative z-10">
+<!-- 1. CITIZEN HEADER & LOCATION BAR -->
+<section class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg bg-surface-container-low/80 backdrop-blur-2xl p-space-lg rounded-xl shadow-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center p-space-xs rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+</span>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">UrbanCool Citizen Heat Guardian • Live Neighborhood Advisory</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span id="current-ward-label">Downtown Metro East — Ward 07</span>
+</h1>
+<div class="flex items-center gap-space-xs pl-space-sm">
+<button class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest transition-all" id="btn-use-gps">
+<span class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">my_location</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Use My GPS</span>
+</button>
+<div class="relative">
+<select class="appearance-none bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm px-space-md py-space-xs pr-space-xl rounded-full focus:outline-none transition-all cursor-pointer" id="ward-selector">
+<option value="Ward 07">Ward 07 (Downtown East)</option>
+<option value="Ward 03">Ward 03 (Harbor Basin)</option>
+<option value="Ward 11">Ward 11 (Industrial Corridor)</option>
+<option value="Ward 14">Ward 14 (Uptown Heights)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Weather Synopsis Pill -->
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-lowest/90 px-space-md py-space-sm rounded-full shadow-md">
+<div class="w-3 h-3 rounded-full bg-error animate-ping"></div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-x-space-sm">
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-error">Current Heat Index: 41.8°C</span>
+<span class="hidden sm:inline text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dangerous Exposure Advisory in Effect</span>
+</div>
+</div>
+</section>
+<!-- 2. MAIN BENTO GRID: RADIAL GAUGE (HERO) + ANCILLARY VITALS -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- 2A. Central Radial Heat Gauge (8 cols) -->
+<div class="lg:col-span-8 flex flex-col justify-between bg-surface-container-low/70 backdrop-blur-2xl p-space-xl rounded-xl shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Atmospheric Thermodynamic Load</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Neighborhood Thermal Severity Gauge</h2>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-error-container/20 text-error font-label-caps text-label-caps uppercase font-bold tracking-widest animate-pulse">
+              Extreme Risk
+            </span>
+</div>
+<!-- Gauge SVG Visualizer -->
+<div class="relative flex flex-col items-center justify-center my-space-md">
+<div class="w-full max-w-[420px] aspect-[2/1] relative flex items-end justify-center">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 240 135">
+<defs>
+<!-- Glow Filters -->
+<filter height="140%" id="crimsonGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<lineargradient id="gaugeTrackGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#10B981"></stop>
+<stop offset="35%" stop-color="#14B8A6"></stop>
+<stop offset="60%" stop-color="#F59E0B"></stop>
+<stop offset="85%" stop-color="#EA580C"></stop>
+<stop offset="100%" stop-color="#EF4444"></stop>
+</lineargradient>
+</defs>
+<!-- Background Track -->
+<path d="M 25 125 A 95 95 0 0 1 215 125" fill="none" stroke="#262a33" stroke-linecap="round" stroke-width="16"></path>
+<!-- Segment 1: Safe (20-27C) Emerald -->
+<path d="M 25 125 A 95 95 0 0 1 65 52" fill="none" opacity="0.35" stroke="#10B981" stroke-linecap="round" stroke-width="16"></path>
+<!-- Segment 2: Moderate (28-34C) Teal/Amber -->
+<path d="M 67 49 A 95 95 0 0 1 120 30" fill="none" opacity="0.35" stroke="#F59E0B" stroke-width="16"></path>
+<!-- Segment 3: Extreme (35-40C) Thermal Orange -->
+<path d="M 122 30 A 95 95 0 0 1 175 49" fill="none" opacity="0.45" stroke="#EA580C" stroke-width="16"></path>
+<!-- Segment 4: Emergency (41C+) Infrared Crimson Active Bar -->
+<path d="M 177 52 A 95 95 0 0 1 215 125" fill="none" filter="url(#crimsonGlow)" stroke="#EF4444" stroke-linecap="round" stroke-width="18"></path>
+<!-- Gauge Ticks & Degree Labels -->
+<text fill="#86948a" font-family="Inter" font-size="8" text-anchor="middle" x="22" y="140">20°C</text>
+<text fill="#86948a" font-family="Inter" font-size="8" text-anchor="middle" x="60" y="42">28°C</text>
+<text fill="#86948a" font-family="Inter" font-size="8" text-anchor="middle" x="120" y="22">35°C</text>
+<text fill="#86948a" font-family="Inter" font-size="8" text-anchor="middle" x="180" y="42">40°C</text>
+<text fill="#EF4444" font-family="Inter" font-size="9" font-weight="bold" text-anchor="middle" x="218" y="140">41°C+</text>
+<!-- Indicator Needle Pivoting at (120, 125) pointed to 41.8°C (~68 deg from vertical right) -->
+<g class="transition-transform duration-1000 ease-out origin-[120px_125px]" style="transform: rotate(66deg);">
+<line filter="url(#crimsonGlow)" stroke="#EF4444" stroke-linecap="round" stroke-width="3" x1="120" x2="120" y1="125" y2="34"></line>
+<circle cx="120" cy="34" fill="#FFFFFF" r="3.5"></circle>
+<circle cx="120" cy="125" fill="#262a33" r="9"></circle>
+<circle cx="120" cy="125" fill="#EF4444" r="4.5"></circle>
+</g>
+</svg>
+<!-- Central Digital Heat Value Readout -->
+<div class="absolute bottom-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg text-display-lg font-black tracking-tight text-on-surface leading-none">
+                  41.8<span class="text-error font-light text-headline-xl">°C</span>
+</span>
+<span class="font-label-mono-stat text-label-mono-stat text-on-surface-variant font-medium mt-space-2xs">
+                  Feels like <strong class="text-error font-bold">46.2°C</strong> with Radiant Asphalt
+                </span>
+</div>
+</div>
+<!-- Central Advisory Glow Badge -->
+<div class="mt-space-lg px-space-lg py-space-sm rounded-full bg-error-container/20 shadow-[0_0_24px_rgba(255,180,171,0.2)] flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Extreme Risk — Limit All Outdoor Exertion</span>
+</div>
+</div>
+<!-- Secondary Telemetry Micro-Pills -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-md mt-space-md bg-surface-container/50 rounded-lg p-space-sm">
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="p-space-xs rounded-full bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined">wb_sunny</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">UV Radiation</span>
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-on-surface">10+ Very High (12m Burn)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="p-space-xs rounded-full bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Relative Humidity</span>
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-on-surface">64% Saturated Vapor</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="p-space-xs rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Hydration Rhythm</span>
+<span class="font-label-mono-stat text-label-mono-stat font-bold text-primary">Drink Water Every 20 Mins</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2B. Environmental Neighborhood Snapshot & Action Strip (4 cols) -->
+<div class="lg:col-span-4 flex flex-col justify-between gap-space-md">
+<!-- Neighborhood Heatmap Satellite Card -->
+<div class="relative bg-surface-container-low/70 backdrop-blur-2xl rounded-xl p-space-md shadow-xl overflow-hidden flex-1 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">satellite_alt</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Thermal Sentinel Orbit 9</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high font-label-mono-stat text-label-caps text-on-surface">Ward 07 Hotspots</span>
+</div>
+<div class="w-full h-44 bg-cover bg-center rounded-lg relative overflow-hidden shadow-inner my-space-xs" data-location="Downtown East, Singapore" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKq9oubT5m-kgAbtLsK4kN_9pDWEZ88L72zcY_9ukvzYo_t35e7GH7dHwM__bgY1FJ7Z_TSSQ2QytZuQL4tNd4l-X6PeitdXkIU3ueJiRQu5zzGCviTEmqZKfaQ2rzpobLke0hmkNknQEc6V6LVXAqamOc7wEmjHiMUvg_llZ4k0eoCZd9ojK9KGWP6afYT2TQSjNioCF6V6HWHPjPVbEB78wSgjGD_qO1ArrK3YuKXcGJ6U9cmcrT');">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-space-xs py-space-2xs rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-mono-stat text-label-caps text-error flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Surface Temp: 51.4°C
+              </div>
+<div class="absolute bottom-2 right-2 px-space-xs py-space-2xs rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-mono-stat text-label-caps text-primary">
+                Canopy Delta: -5.8°C
+              </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Asphalt radiation levels in Ward 07 are currently elevated by +4.3°C above baseline due to unshaded concrete transit corridors.
+            </p>
+</div>
+<!-- Rapid Action Callout -->
+<div class="bg-gradient-to-br from-tertiary-container/30 to-surface-container-low backdrop-blur-2xl p-space-lg rounded-xl shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dew_point</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-bold">Rapid Heat Relief</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Emergency High-Mist Deployment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated cooling mist nodes are operating at 100% capacity along pedestrian pathways.
+            </p>
+<button class="mt-space-xs w-full py-space-sm px-space-md rounded-lg bg-tertiary text-on-tertiary font-body-sm text-body-sm font-bold hover:shadow-[0_0_20px_rgba(79,219,200,0.5)] transition-all flex items-center justify-center gap-space-sm cursor-pointer">
+<span class="material-symbols-outlined">near_me</span>
+<span>Find Closest Misting Station (120m)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. URGENT SAFETY ALERTS & COOLING SANCTUARIES FINDER -->
+<section class="flex flex-col gap-space-md">
+<!-- Ambient Pulsing Emergency Card -->
+<div class="relative p-space-md rounded-xl bg-error-container/15 shadow-[0_0_28px_rgba(239,68,68,0.2)] overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="p-space-sm rounded-full bg-error/20 text-error flex-shrink-0 animate-bounce">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">hvac</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs rounded bg-error font-label-caps text-label-caps text-on-error uppercase font-black">City Mandate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Updated 8 mins ago</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                Mandatory Cooling Centers Open: Free Public AC Sanctuaries Within 800m
+              </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Municipal protocol requires free admission, chilled hydration refills, pet crating facilities, and emergency paramedic triage.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm font-semibold transition-all">
+              Filter by Pets Allowed
+            </button>
+</div>
+</div>
+<!-- Cooling Hubs Interactive Locator Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Hub 1 -->
+<div class="bg-surface-container-low/80 backdrop-blur-2xl rounded-xl p-space-md shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded bg-primary-container/20 text-primary font-label-caps text-label-caps uppercase font-bold">Open • Primary Hub</span>
+<span class="font-label-mono-stat text-label-mono-stat font-semibold text-primary">350m Away</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-space-xs">Civic Central Library Cooling Hub</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Level 1 Atrium & Sub-level North Auditorium. Climate control fixed at 21.5°C.</p>
+<!-- Capacity Meter -->
+<div class="mt-space-sm flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-mono-stat text-label-caps text-on-surface-variant">
+<span>Current Occupancy</span>
+<span class="text-secondary font-bold">82% Full</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Amenity Badges -->
+<div class="flex flex-wrap gap-space-xs mt-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">accessible</span> ADA Ramp
+                </span>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">water_full</span> Cold Water
+                </span>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">pets</span> Pets Welcomed
+                </span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-mono-stat text-label-caps text-on-surface-variant">~4 min walking time</span>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:shadow-[0_0_12px_rgba(78,222,163,0.4)] transition-all flex items-center gap-space-2xs cursor-pointer">
+<span>Directions</span>
+<span class="material-symbols-outlined text-[18px]">navigation</span>
+</button>
+</div>
+</div>
+<!-- Hub 2 -->
+<div class="bg-surface-container-low/80 backdrop-blur-2xl rounded-xl p-space-md shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded bg-primary-container/20 text-primary font-label-caps text-label-caps uppercase font-bold">Open • Sports Center</span>
+<span class="font-label-mono-stat text-label-mono-stat font-semibold text-primary">580m Away</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-space-xs">Eastside Community Arena</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Indoor Multi-Sport Complex with medical cooling rehydration tents and electrolyte stations.</p>
+<!-- Capacity Meter -->
+<div class="mt-space-sm flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-mono-stat text-label-caps text-on-surface-variant">
+<span>Current Occupancy</span>
+<span class="text-primary font-bold">45% Full</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Amenity Badges -->
+<div class="flex flex-wrap gap-space-xs mt-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">accessible</span> ADA Ramp
+                </span>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">medical_services</span> First Aid
+                </span>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">power</span> Device Charge
+                </span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-mono-stat text-label-caps text-on-surface-variant">~7 min walking time</span>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:shadow-[0_0_12px_rgba(78,222,163,0.4)] transition-all flex items-center gap-space-2xs cursor-pointer">
+<span>Directions</span>
+<span class="material-symbols-outlined text-[18px]">navigation</span>
+</button>
+</div>
+</div>
+<!-- Hub 3 -->
+<div class="bg-surface-container-low/80 backdrop-blur-2xl rounded-xl p-space-md shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded bg-secondary-container/20 text-secondary font-label-caps text-label-caps uppercase font-bold">High Density</span>
+<span class="font-label-mono-stat text-label-mono-stat font-semibold text-secondary">740m Away</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-space-xs">Metro Transit Grand Galleria</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Air-conditioned underground concourse connecting Subway Lines 2 & 7.</p>
+<!-- Capacity Meter -->
+<div class="mt-space-sm flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-mono-stat text-label-caps text-on-surface-variant">
+<span>Current Occupancy</span>
+<span class="text-error font-bold">94% Full</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Amenity Badges -->
+<div class="flex flex-wrap gap-space-xs mt-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">escalator</span> Elevators Open
+                </span>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">wifi</span> Free WiFi
+                </span>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-[14px]">restaurant</span> Food Stalls
+                </span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-mono-stat text-label-caps text-on-surface-variant">~9 min walking time</span>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-body-sm text-body-sm font-semibold transition-all flex items-center gap-space-2xs cursor-pointer">
+<span>Directions</span>
+<span class="material-symbols-outlined text-[18px]">navigation</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. INTERACTIVE EXPANDABLE HEAT SAFETY ACCORDION -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Life Safety Protocol</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Emergency Response & Mitigation Handbook</h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Accordion Item 1 (Open by Default) -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl overflow-hidden shadow-lg transition-all" id="accordion-item-1">
+<button class="w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors cursor-pointer" onclick="toggleAccordion('1')">
+<div class="flex items-center gap-space-md">
+<span class="flex-shrink-0 w-8 h-8 rounded-full bg-error-container/20 text-error flex items-center justify-center font-label-mono-stat text-label-mono-stat font-bold">01</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Symptoms of Heat Exhaustion vs. Heat Stroke (Emergency Guide)
+                </span>
+</div>
+<span class="material-symbols-outlined text-primary transform rotate-180 transition-transform" id="chevron-1">expand_more</span>
+</button>
+<div class="px-space-md pb-space-lg flex flex-col gap-space-md" id="content-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Heat Exhaustion Column -->
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">Heat Exhaustion</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-container/20 text-secondary font-label-caps text-label-caps uppercase font-bold">Take Action</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs list-disc list-inside">
+<li>Heavy, profuse perspiration & cool, pale, clammy skin</li>
+<li>Fast, weak pulse & muscle cramping</li>
+<li>Dizziness, lightheadedness, or nausea</li>
+<li>Normal or slightly elevated body temperature (<39°C)</li>
+</ul>
+<div class="mt-space-xs p-space-xs rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+<strong>Intervention:</strong> Move into AC immediately, loosen tight clothing, sip chilled water, and apply wet towels to neck.
+                  </div>
+</div>
+<!-- Heat Stroke Column -->
+<div class="p-space-md rounded-lg bg-error-container/15 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-error">Heat Stroke (Medical Emergency)</span>
+<span class="px-space-xs py-space-2xs rounded bg-error text-on-error font-label-caps text-label-caps uppercase font-black">Call 911 / 112</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs list-disc list-inside">
+<li>High body temperature (>40°C / 103°F)</li>
+<li>Hot, red, dry or damp skin with NO active sweating</li>
+<li>Rapid, pounding pulse & confusion or altered mental state</li>
+<li>Slurred speech, seizures, or loss of consciousness</li>
+</ul>
+<div class="mt-space-xs p-space-xs rounded bg-error-container/40 text-on-error-container font-body-sm text-body-sm">
+<strong>CRITICAL:</strong> Immediately phone local emergency services. Submerge in ice bath or soak garments in ice water while waiting.
+                  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl overflow-hidden shadow-lg transition-all" id="accordion-item-2">
+<button class="w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors cursor-pointer" onclick="toggleAccordion('2')">
+<div class="flex items-center gap-space-md">
+<span class="flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-mono-stat text-label-mono-stat font-bold">02</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Protecting Pets, Elderly & Children During Tier 3 Heat Waves
+                </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform" id="chevron-2">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-lg flex flex-col gap-space-md" id="content-2">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-bold">
+<span class="material-symbols-outlined">pets</span> Domestic Pets
+                  </div>
+<p>Walk dogs only before 06:30 or after 21:00. Pavement exceeding 30°C causes severe pad blistering within 60 seconds. Never leave animals unattended in parked vehicles under any circumstance.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-bold">
+<span class="material-symbols-outlined">elderly</span> Seniors & Vulnerable
+                  </div>
+<p>Check on elderly neighbors twice daily. Aging sweat glands reduce thermoregulatory reflexes. Encourage non-alcoholic fluid intake and confirm functioning fans or proximity to cooling shelters.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary font-bold">
+<span class="material-symbols-outlined">child_care</span> Infants & Children
+                  </div>
+<p>Children generate more metabolic heat per pound than adults. Avoid stroller blanket covers which trap radiant thermal domes (raising carriage temps up to 8°C above ambient air).</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl overflow-hidden shadow-lg transition-all" id="accordion-item-3">
+<button class="w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors cursor-pointer" onclick="toggleAccordion('3')">
+<div class="flex items-center gap-space-md">
+<span class="flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-mono-stat text-label-mono-stat font-bold">03</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Home Cooling Without High AC Power Bills (Passive Ventilation Tips)
+                </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform" id="chevron-3">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-lg flex flex-col gap-space-md" id="content-3">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Thermal Purging at Night</span>
+<p>Open windows facing prevailing night breezes (south-facing in Ward 07) between 01:00 and 06:00. Use box fans positioned outward on leeward windows to vent accumulated diurnal heat plumes from ceiling vaults.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Solar Shading & Evaporative Tricks</span>
+<p>Hang damp cotton sheets across shaded windows to leverage latent evaporative cooling. Close exterior-facing thermal curtains before 09:00 to deflect up to 70% of peak solar infrared radiation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. COMMUNITY VOLUNTEER & ASSISTANCE BANNER -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/70 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-space-md shadow-lg">
+<div class="flex items-center gap-space-md">
+<div class="p-space-sm rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-headline-md">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Community Buddy System Active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Over 340 volunteer wellness checks logged in Ward 07 today. Need support or can deliver ice to a neighbor?</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm font-semibold transition-all">
+            Request Check-In
+          </button>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary hover:bg-primary-fixed-dim font-body-sm text-body-sm font-semibold transition-all">
+            Volunteer as Guardian
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Script for Accordion & GPS Simulation -->
+<script>
+    function toggleAccordion(id) {
+      const content = document.getElementById('content-' + id);
+      const chevron = document.getElementById('chevron-' + id);
+      if (!content || !chevron) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        chevron.classList.add('rotate-180');
+        chevron.classList.add('text-primary');
+        chevron.classList.remove('text-outline');
+      } else {
+        content.classList.add('hidden');
+        chevron.classList.remove('rotate-180');
+        chevron.classList.remove('text-primary');
+        chevron.classList.add('text-outline');
+      }
+    }
+
+    // Ward Selector Logic
+    const wardSelector = document.getElementById('ward-selector');
+    const wardLabel = document.getElementById('current-ward-label');
+    const gpsBtn = document.getElementById('btn-use-gps');
+
+    if (wardSelector && wardLabel) {
+      wardSelector.addEventListener('change', function(e) {
+        const val = e.target.value;
+        if (val === 'Ward 07') wardLabel.textContent = 'Downtown Metro East — Ward 07';
+        if (val === 'Ward 03') wardLabel.textContent = 'Harbor Basin Coastal — Ward 03';
+        if (val === 'Ward 11') wardLabel.textContent = 'Industrial Foundry Zone — Ward 11';
+        if (val === 'Ward 14') wardLabel.textContent = 'Uptown Ridgeway Heights — Ward 14';
+      });
+    }
+
+    if (gpsBtn && wardLabel) {
+      gpsBtn.addEventListener('click', function() {
+        gpsBtn.classList.add('animate-pulse');
+        setTimeout(function() {
+          gpsBtn.classList.remove('animate-pulse');
+          wardLabel.textContent = 'Downtown Metro East — Ward 07 (GPS Locked)';
+        }, 600);
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest/90 backdrop-blur-xl border-t border-outline-variant/30 py-space-lg"><div class="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="font-label-mono-stat text-label-mono-stat text-on-surface font-semibold">UrbanCool v4.2 Resilience Mesh</span><span class="text-outline">|</span><span class="font-body-sm text-body-sm">Municipal Climate Operations Command</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="hover:text-primary transition-colors" href="#">WMO Compliance Specs</a><a class="hover:text-primary transition-colors" href="#">Sensor Calibration Logs</a><a class="hover:text-primary transition-colors" href="#">Emergency Protocols</a></div></div></footer></body></html>

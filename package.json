@@ -1,0 +1,17 @@
+{
+  "name": "urbancool",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev:db": "npm run db --workspace=server",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "seed": "npm run seed --workspace=server",
+    "test": "npm run test --workspace=server && npm run test --workspace=client",
+    "lint": "npm run lint --workspace=server && npm run lint --workspace=client"
+  }
+}
