@@ -166,10 +166,10 @@ export default function CitizenView() {
             )}
 
             {/* 1. CITIZEN HEADER & LOCATION BAR */}
-            <section className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg bg-surface-container-low/80 backdrop-blur-2xl p-space-lg rounded-xl shadow-xl border border-outline-variant/30">
+            <section className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg clay-card p-space-lg shadow-xl">
               <div className="flex flex-col gap-space-xs">
                 <div className="flex items-center gap-space-sm">
-                  <span className="inline-flex items-center justify-center p-space-xs rounded-full bg-primary/10 text-primary">
+                  <span className="inline-flex items-center justify-center p-space-xs rounded-full clay-pill-primary text-primary">
                     <span className="material-symbols-outlined text-lg">shield</span>
                   </span>
                   <span className="font-label-caps text-label-caps uppercase text-primary tracking-widest font-bold">
@@ -186,7 +186,7 @@ export default function CitizenView() {
                   <div className="flex items-center gap-space-xs pl-space-sm">
                     <button
                       onClick={handleGpsClick}
-                      className="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest transition-all border border-outline-variant/30 cursor-pointer"
+                      className="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-full clay-btn-surface transition-all cursor-pointer"
                       id="btn-use-gps"
                     >
                       <span className="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform text-sm">
@@ -201,7 +201,7 @@ export default function CitizenView() {
                       <select
                         value={selectedWard}
                         onChange={(e) => setSelectedWard(e.target.value)}
-                        className="appearance-none bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm px-space-md py-space-xs pr-space-xl rounded-full focus:outline-none transition-all cursor-pointer border border-outline-variant/30"
+                        className="appearance-none clay-inset text-on-surface font-body-sm text-body-sm px-space-md py-space-xs pr-space-xl rounded-full focus:outline-none transition-all cursor-pointer"
                       >
                         {WARDS.map((w) => (
                           <option key={w.id} value={w.id} className="bg-surface-container-high text-on-surface">
@@ -218,7 +218,7 @@ export default function CitizenView() {
               </div>
 
               {/* Weather Synopsis Pill */}
-              <div className="flex flex-wrap items-center gap-space-sm bg-surface-container-lowest/90 px-space-md py-space-sm rounded-full shadow-md border border-outline-variant/30">
+              <div className={`flex flex-wrap items-center gap-space-sm px-space-md py-space-sm rounded-full ${maxSeverity === 'critical' ? 'clay-pill-error' : 'clay-pill-amber'}`}>
                 <div className={`w-3 h-3 rounded-full ${maxSeverity === 'critical' ? 'bg-error' : 'bg-secondary'} animate-ping`} />
                 <div className="flex flex-col sm:flex-row sm:items-center gap-x-space-sm">
                   <span className={`font-label-mono-stat text-label-mono-stat font-bold ${maxSeverity === 'critical' ? 'text-error' : 'text-secondary'}`}>
@@ -242,7 +242,7 @@ export default function CitizenView() {
             {/* 2. MAIN BENTO GRID: RADIAL GAUGE (HERO) + ANCILLARY VITALS */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
               {/* 2A. Central Radial Heat Gauge (8 cols) */}
-              <div className="lg:col-span-8 flex flex-col justify-between bg-surface-container-low/70 backdrop-blur-2xl p-space-xl rounded-xl shadow-xl relative overflow-hidden border border-outline-variant/30">
+              <div className="lg:col-span-8 flex flex-col justify-between clay-card p-space-xl shadow-2xl relative overflow-hidden">
                 <div className="flex items-center justify-between mb-space-md">
                   <div>
                     <span className="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">
@@ -252,7 +252,7 @@ export default function CitizenView() {
                       Neighborhood Thermal Severity Gauge
                     </h2>
                   </div>
-                  <span className={`px-space-sm py-space-2xs rounded-full font-label-caps text-label-caps uppercase font-bold tracking-widest border ${severityCfg.badge} animate-pulse`}>
+                  <span className={`px-space-sm py-space-2xs rounded-full font-label-caps text-label-caps uppercase font-bold tracking-widest ${maxSeverity === 'critical' ? 'clay-pill-error' : 'clay-pill-amber'} animate-pulse`}>
                     {maxSeverity.toUpperCase()} RISK
                   </span>
                 </div>
@@ -435,7 +435,7 @@ export default function CitizenView() {
                 </div>
 
                 {/* Rapid Action Callout */}
-                <div className="bg-gradient-to-br from-tertiary-container/30 to-surface-container-low backdrop-blur-2xl p-space-lg rounded-xl shadow-xl flex flex-col gap-space-sm border border-tertiary/30">
+                <div className="clay-card clay-glow-tertiary p-space-lg shadow-xl flex flex-col gap-space-sm">
                   <div className="flex items-center gap-space-xs text-tertiary">
                     <span className="material-symbols-outlined">dew_point</span>
                     <span className="font-label-caps text-label-caps uppercase tracking-wider font-bold">Rapid Heat Relief</span>
@@ -446,7 +446,7 @@ export default function CitizenView() {
                   </p>
                   <button
                     onClick={() => handleDirectionClick('Closest Misting Station (Sector 7)')}
-                    className="mt-space-xs w-full py-space-sm px-space-md rounded-lg bg-tertiary text-on-tertiary font-body-sm text-body-sm font-bold hover:shadow-[0_0_20px_rgba(79,219,200,0.5)] transition-all flex items-center justify-center gap-space-sm cursor-pointer"
+                    className="mt-space-xs w-full py-space-sm px-space-md rounded-xl clay-btn-primary text-white font-body-sm text-body-sm font-bold flex items-center justify-center gap-space-sm cursor-pointer"
                   >
                     <span className="material-symbols-outlined text-base">near_me</span>
                     <span>Find Closest Misting Station (120m)</span>
@@ -669,7 +669,7 @@ export default function CitizenView() {
                     <span className="font-label-mono-stat text-label-caps text-on-surface-variant">~7 min walking time</span>
                     <button
                       onClick={() => handleDirectionClick('Eastside Community Arena')}
-                      className="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:shadow-[0_0_12px_rgba(78,222,163,0.4)] transition-all flex items-center gap-space-2xs cursor-pointer"
+                      className="px-space-md py-space-xs rounded-full clay-btn-primary text-white font-body-sm text-body-sm font-semibold flex items-center gap-space-2xs cursor-pointer"
                     >
                       <span>Directions</span>
                       <span className="material-symbols-outlined text-[18px]">navigation</span>

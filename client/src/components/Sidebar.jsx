@@ -20,14 +20,14 @@ export default function Sidebar({ canopyDelta = '-3.4', activeWard = 'Ward-1' })
   ];
 
   return (
-    <aside className="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest/80 backdrop-blur-xl z-40 hidden lg:flex flex-col justify-between py-space-md border-r border-outline-variant/20 shadow-2xl">
+    <aside className="fixed left-0 top-16 bottom-0 w-64 glass-strong z-40 hidden lg:flex flex-col justify-between py-space-md border-r border-white/8">
       <div className="flex flex-col gap-space-lg px-space-md">
         {/* Sidebar Header */}
         <div className="flex items-center justify-between px-space-sm pt-2">
           <span className="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest font-bold">
             Mission Telemetry
           </span>
-          <span className="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-high text-tertiary font-mono">
+          <span className="clay-pill text-tertiary font-mono">
             NODE VERIFIED
           </span>
         </div>
@@ -40,13 +40,13 @@ export default function Sidebar({ canopyDelta = '-3.4', activeWard = 'Ward-1' })
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all ${
+                className={`flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all ${
                   isActive
-                    ? 'bg-surface-container text-primary font-bold shadow-sm'
-                    : 'text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'
+                    ? 'clay-btn-primary text-white font-bold shadow-md'
+                    : 'text-on-surface-variant hover:bg-surface-container/50 hover:text-on-surface'
                 }`}
               >
-                <span className={`material-symbols-outlined ${item.color} text-xl`}>
+                <span className={`material-symbols-outlined text-xl ${isActive ? 'text-white' : item.color}`}>
                   {item.icon}
                 </span>
                 <span className="font-body-sm text-body-sm">{item.name}</span>
@@ -58,7 +58,7 @@ export default function Sidebar({ canopyDelta = '-3.4', activeWard = 'Ward-1' })
 
       {/* Bottom Telemetry Card */}
       <div className="px-space-md pb-2">
-        <div className="p-space-md rounded-xl bg-surface-container-low/90 backdrop-blur-md border border-outline-variant/20 flex flex-col gap-space-xs shadow-lg">
+        <div className="p-space-md rounded-2xl clay-card flex flex-col gap-space-xs shadow-xl">
           <div className="flex items-center justify-between">
             <span className="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">
               Canopy Delta
@@ -67,7 +67,7 @@ export default function Sidebar({ canopyDelta = '-3.4', activeWard = 'Ward-1' })
               {canopyDelta}°C
             </span>
           </div>
-          <div className="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden my-1">
+          <div className="w-full h-2 rounded-full clay-inset overflow-hidden my-1">
             <div className="h-full bg-primary rounded-full w-3/4 shadow-[0_0_8px_rgba(78,222,163,0.6)]" />
           </div>
           <span className="font-body-sm text-xs text-on-surface-variant truncate">

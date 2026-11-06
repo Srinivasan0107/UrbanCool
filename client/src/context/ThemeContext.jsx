@@ -13,6 +13,16 @@ export function ThemeProvider({ children }) {
     return 'dark'; // Default Stitch cyber-environmental theme
   });
 
+  const [styleMode, setStyleModeState] = useState(() => {
+    try {
+      const saved = localStorage.getItem('uc_style_mode');
+      if (saved === 'clay' || saved === 'glass') return saved;
+    } catch {
+      // Fallback
+    }
+    return 'clay'; // Default to tactile claymorphism!
+  });
+
   const applyTheme = useCallback((currentTheme) => {
     const root = document.documentElement;
     if (currentTheme === 'light') {
@@ -28,9 +38,24 @@ export function ThemeProvider({ children }) {
     }
   }, []);
 
+  const applyStyleMode = useCallback((currentStyle) => {
+    const root = document.documentElement;
+    if (currentStyle === 'clay') {
+      root.classList.add('clay-mode');
+      root.setAttribute('data-style', 'clay');
+    } else {
+      root.classList.remove('clay-mode');
+      root.setAttribute('data-style', 'glass');
+    }
+  }, []);
+
   useEffect(() => {
     applyTheme(theme);
   }, [theme, applyTheme]);
+
+  useEffect(() => {
+    applyStyleMode(styleMode);
+  }, [styleMode, applyStyleMode]);
 
   const toggleTheme = useCallback(() => {
     setThemeState((prev) => {
@@ -55,6 +80,29 @@ export function ThemeProvider({ children }) {
     setThemeState(newTheme);
   }, [applyTheme]);
 
+  const toggleStyle = useCallback(() => {
+    setStyleModeState((prev) => {
+      const next = prev === 'clay' ? 'glass' : 'clay';
+      try {
+        localStorage.setItem('uc_style_mode', next);
+      } catch {
+        // Ignore localStorage write error
+      }
+      applyStyleMode(next);
+      return next;
+    });
+  }, [applyStyleMode]);
+
+  const setStyleMode = useCallback((newStyle) => {
+    try {
+      localStorage.setItem('uc_style_mode', newStyle);
+    } catch {
+      // Ignore localStorage write error
+    }
+    applyStyleMode(newStyle);
+    setStyleModeState(newStyle);
+  }, [applyStyleMode]);
+
   return (
     <ThemeContext.Provider
       value={{
@@ -63,6 +111,10 @@ export function ThemeProvider({ children }) {
         isLight: theme === 'light',
         toggleTheme,
         setTheme,
+        styleMode,
+        isClay: styleMode === 'clay',
+        toggleStyle,
+        setStyleMode,
       }}
     >
       {children}
@@ -79,7 +131,12 @@ export function useTheme() {
       isLight: false,
       toggleTheme: () => {},
       setTheme: () => {},
+      styleMode: 'clay',
+      isClay: true,
+      toggleStyle: () => {},
+      setStyleMode: () => {},
     };
   }
   return ctx;
 }
+

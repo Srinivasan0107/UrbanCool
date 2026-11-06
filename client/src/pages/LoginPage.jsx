@@ -90,11 +90,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-surface font-body text-on-surface flex items-center justify-center px-4 relative overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
-        <div className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 rounded-full bg-secondary/15 blur-3xl" />
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden p-4">
+      {/* Aurora background orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full opacity-30 blur-3xl animate-float-slow" style={{background: 'radial-gradient(circle, rgba(78,222,163,0.4) 0%, transparent 70%)'}} />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full opacity-25 blur-3xl animate-float-slow" style={{background: 'radial-gradient(circle, rgba(130,80,255,0.4) 0%, transparent 70%)', animationDelay: '4s'}} />
+        <div className="absolute top-[40%] right-[20%] w-[30vw] h-[30vw] rounded-full opacity-20 blur-3xl" style={{background: 'radial-gradient(circle, rgba(255,185,95,0.3) 0%, transparent 70%)'}} />
       </div>
 
       <div className="w-full max-w-md z-10">
@@ -110,7 +111,7 @@ export default function LoginPage() {
         </div>
 
         {/* Card */}
-        <div className="bg-surface-container-low/80 backdrop-blur-2xl border border-outline-variant/30 rounded-2xl p-space-xl shadow-2xl">
+        <div className="relative z-10 w-full max-w-md clay-card p-8 shadow-2xl">
           <h2 className="font-headline-sm text-headline-sm font-bold text-on-surface mb-6">
             Sign In to Telemetry Hub
           </h2>
@@ -151,7 +152,7 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setShowConfigModal(true)}
-                className="w-full py-2.5 px-4 rounded-xl border border-outline-variant/50 bg-surface-container-high/60 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-3 font-medium text-body-sm text-on-surface shadow-sm"
+                className="w-full py-2.5 px-4 rounded-xl clay-btn-surface transition-all flex items-center justify-center gap-3 font-medium text-body-sm text-on-surface shadow-sm"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
@@ -200,7 +201,7 @@ export default function LoginPage() {
                 autoComplete="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full px-space-md py-space-xs rounded-xl border border-outline-variant/40 text-body-md text-on-surface bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-outline"
+                className="w-full px-space-md py-space-xs rounded-xl clay-inset text-body-md text-on-surface transition-all placeholder:text-outline"
                 placeholder="planner@urbancool.dev"
               />
             </div>
@@ -220,7 +221,7 @@ export default function LoginPage() {
                 autoComplete="current-password"
                 value={form.password}
                 onChange={handleChange}
-                className="w-full px-space-md py-space-xs rounded-xl border border-outline-variant/40 text-body-md text-on-surface bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-outline"
+                className="w-full px-space-md py-space-xs rounded-xl clay-inset text-body-md text-on-surface transition-all placeholder:text-outline"
                 placeholder="••••••••"
               />
             </div>
@@ -228,7 +229,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-2.5 px-4 rounded-xl bg-primary text-on-primary font-headline-sm text-body-sm font-bold hover:bg-primary-container disabled:opacity-60 disabled:cursor-not-allowed transition-all shadow-md mt-2"
+              className="w-full py-3 px-4 rounded-xl clay-btn-primary text-white font-headline-sm text-body-sm font-bold disabled:opacity-60 disabled:cursor-not-allowed transition-all shadow-lg mt-2"
             >
               {loading ? 'Authenticating…' : 'Access Telemetry Grid'}
             </button>
@@ -245,7 +246,7 @@ export default function LoginPage() {
                 onClick={() =>
                   setForm({ email: 'planner@urbancool.dev', password: 'planner123' })
                 }
-                className="px-space-sm py-2 rounded-lg border border-outline-variant/30 hover:border-primary hover:bg-surface-container-high transition-colors font-body-sm text-body-sm text-on-surface text-center"
+                className="px-space-sm py-2 rounded-xl clay-btn-surface transition-colors font-body-sm text-body-sm text-on-surface text-center"
               >
                 🏙️ City Planner
               </button>
@@ -254,7 +255,7 @@ export default function LoginPage() {
                 onClick={() =>
                   setForm({ email: 'citizen@urbancool.dev', password: 'citizen123' })
                 }
-                className="px-space-sm py-2 rounded-lg border border-outline-variant/30 hover:border-secondary hover:bg-surface-container-high transition-colors font-body-sm text-body-sm text-on-surface text-center"
+                className="px-space-sm py-2 rounded-xl clay-btn-surface transition-colors font-body-sm text-body-sm text-on-surface text-center"
               >
                 👤 Citizen User
               </button>

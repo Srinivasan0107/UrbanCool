@@ -402,7 +402,8 @@ export default function CoolingTracker() {
                 </div>
 
                 {/* Quick Telemetry Snapshot Pill Group */}
-                <div className="flex items-center gap-space-sm bg-surface-container-low p-space-xs rounded-xl shadow-lg border border-outline-variant/30">
+                {/* Quick Telemetry Snapshot Pill Group */}
+                <div className="flex items-center gap-space-sm clay-card p-space-xs shadow-xl">
                   <div className="flex flex-col px-space-md py-space-xs">
                     <span className="font-label-caps text-label-caps uppercase text-on-surface-variant">
                       Aggregated Sink
@@ -435,8 +436,8 @@ export default function CoolingTracker() {
               {/* Status Tabs with Sliding Indicator & Filter Console */}
               <div className="flex flex-col gap-space-md">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b-0 pb-space-xs">
-                  {/* Interactive Underline Tabs */}
-                  <div className="relative flex flex-wrap items-center gap-space-sm p-space-2xs bg-surface-container-lowest/80 rounded-xl border border-outline-variant/20">
+                  {/* Interactive Clay Inset Tabs */}
+                  <div className="relative flex flex-wrap items-center gap-space-xs p-1.5 clay-inset rounded-2xl">
                     {STATUS_TABS.map((tab) => {
                       const count = tab.key === 'all'
                         ? wardInitiatives.length
@@ -450,17 +451,17 @@ export default function CoolingTracker() {
                         <button
                           key={tab.key}
                           onClick={() => setActiveTab(tab.key)}
-                          className={`relative z-10 px-space-md py-space-xs font-body-sm text-body-sm font-semibold rounded-lg transition-all flex items-center gap-space-xs ${
+                          className={`relative z-10 px-space-md py-space-xs font-body-sm text-body-sm font-semibold rounded-xl transition-all flex items-center gap-space-xs ${
                             isActive
-                              ? 'bg-surface-container-high text-primary shadow-sm'
-                              : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container'
+                              ? 'clay-btn-primary text-white shadow-md'
+                              : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50'
                           }`}
                         >
                           <span>{tab.label}</span>
                           <span
                             className={`font-label-mono-stat text-label-mono-stat px-space-xs py-0.5 rounded-full ${
                               isActive
-                                ? 'bg-primary/20 text-primary font-bold'
+                                ? 'bg-white/20 text-white font-bold'
                                 : 'bg-surface-container-highest text-on-surface-variant'
                             }`}
                           >
@@ -475,14 +476,14 @@ export default function CoolingTracker() {
                   <div className="flex items-center gap-space-xs">
                     <button
                       onClick={handleExportSpatialGML}
-                      className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all font-body-sm text-body-sm shadow-sm border border-outline-variant/20 cursor-pointer"
+                      className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl clay-btn-surface text-on-surface font-body-sm text-body-sm transition-all shadow-sm cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-base">download</span>
                       <span>Spatial GML</span>
                     </button>
                     <button
                       onClick={() => setIsRegisterOpen(true)}
-                      className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all font-body-sm text-body-sm font-semibold shadow-md cursor-pointer"
+                      className="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl clay-btn-primary text-white font-body-sm text-body-sm font-semibold shadow-md cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-base">add_chart</span>
                       <span>Register Intervention</span>

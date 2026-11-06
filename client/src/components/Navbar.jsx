@@ -35,7 +35,7 @@ export default function Navbar({ alertCount = 3, nodeCount = 60, currentWard = '
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-2xl z-40 border-b border-outline-variant/20 shadow-[0_1px_16px_rgba(0,0,0,0.4)]">
+      <header className="fixed top-0 left-0 right-0 h-16 glass-navbar z-40">
         <div className="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md">
           {/* Left: Platform Emblem & Live Node Clusters Pill */}
           <div className="flex items-center gap-space-lg">
@@ -46,7 +46,7 @@ export default function Navbar({ alertCount = 3, nodeCount = 60, currentWard = '
               </span>
             </Link>
 
-            <div className="hidden xl:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high/60 shadow-[inset_0_0_8px_rgba(78,222,163,0.1)]">
+            <div className="hidden xl:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full clay-pill-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="font-label-caps text-label-caps uppercase tracking-wider text-primary">
                 Tamil Nadu Telemetry: Live Sync • {nodeCount} Node Clusters
@@ -59,7 +59,7 @@ export default function Navbar({ alertCount = 3, nodeCount = 60, currentWard = '
             {/* Heat Advisory Pill */}
             <div
               onClick={() => setIsNotifOpen(true)}
-              className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-error-container/20 border border-error/30 shadow-[0_0_12px_rgba(255,180,171,0.15)] cursor-pointer hover:bg-error-container/30 transition-all"
+              className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full clay-pill-error cursor-pointer hover:brightness-110 transition-all"
               title="Click to inspect active heat advisories"
             >
               <span className="w-2 h-2 rounded-full bg-error animate-ping" />
@@ -72,7 +72,7 @@ export default function Navbar({ alertCount = 3, nodeCount = 60, currentWard = '
             <button
               type="button"
               onClick={() => setIsNotifOpen(true)}
-              className="relative p-2 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface transition-all border border-outline-variant/30 flex items-center justify-center cursor-pointer group shadow-sm"
+              className="relative p-2 rounded-xl clay-btn-surface text-on-surface transition-all flex items-center justify-center cursor-pointer group"
               title="Mission Alert Center (Notifications)"
             >
               <span className="material-symbols-outlined text-lg text-on-surface group-hover:text-primary transition-colors">
@@ -89,7 +89,7 @@ export default function Navbar({ alertCount = 3, nodeCount = 60, currentWard = '
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-2 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface transition-all border border-outline-variant/30 flex items-center justify-center cursor-pointer group shadow-sm"
+              className="p-2 rounded-xl clay-btn-surface text-on-surface transition-all flex items-center justify-center cursor-pointer group"
               title={isDark ? 'Switch to White / Light Mode' : 'Switch to Cyber Dark Mode'}
               aria-label={isDark ? 'Switch to White Mode' : 'Switch to Dark Mode'}
             >
@@ -119,7 +119,7 @@ export default function Navbar({ alertCount = 3, nodeCount = 60, currentWard = '
                 <button
                   type="button"
                   onClick={() => setIsProfileOpen(true)}
-                  className="flex items-center gap-2 p-1 pl-2 pr-2.5 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest border border-outline-variant/30 transition-all cursor-pointer group shadow-sm"
+                  className="flex items-center gap-2 p-1 pl-2 pr-2.5 rounded-full glass-btn transition-all cursor-pointer group"
                   title="Open Profile Manager & Settings"
                 >
                   <div className="relative flex items-center justify-center p-0.5 rounded-full bg-surface-container-high ring-1 ring-primary/40">

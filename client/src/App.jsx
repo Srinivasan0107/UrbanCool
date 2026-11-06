@@ -1,11 +1,24 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import PlannerDashboard from './pages/PlannerDashboard.jsx';
 import CoolingTracker from './pages/CoolingTracker.jsx';
 import CitizenView from './pages/CitizenView.jsx';
+
+const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+const hasRealGoogleId = Boolean(
+  googleClientId && googleClientId.includes('.apps.googleusercontent.com')
+);
+
+function GoogleAuthWrapper({ children }) {
+  if (hasRealGoogleId) {
+    return <GoogleOAuthProvider clientId={googleClientId}>{children}</GoogleOAuthProvider>;
+  }
+  return children;
+}
 
 function ProtectedRoute({ children, allowedRoles }) {
   const { user } = useAuth();
@@ -27,8 +40,22 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/login"
+            element={
+              <GoogleAuthWrapper>
+                <LoginPage />
+              </GoogleAuthWrapper>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <GoogleAuthWrapper>
+                <RegisterPage />
+              </GoogleAuthWrapper>
+            }
+          />
           <Route path="/" element={<RoleRedirect />} />
           <Route
             path="/dashboard"

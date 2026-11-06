@@ -187,7 +187,7 @@ export default function PlannerDashboard() {
             <div className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
               {/* Ward Selector & Breadcrumb Context */}
               <div className="flex flex-wrap items-center gap-space-md">
-                <div className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high/70 backdrop-blur-xl shadow-sm border border-outline-variant/30">
+                <div className="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg glass">
                   <span className="material-symbols-outlined text-primary text-xl">location_city</span>
                   <div className="flex flex-col">
                     <span className="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">
@@ -229,7 +229,7 @@ export default function PlannerDashboard() {
                 <button
                   type="button"
                   onClick={handleExportGeoJSON}
-                  className="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high/80 text-on-surface font-body-sm text-body-sm hover:bg-surface-container-highest transition-all shadow-sm border border-outline-variant/30"
+                  className="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl clay-btn-surface text-on-surface font-body-sm text-body-sm transition-all"
                   id="btn-export"
                 >
                   <span className="material-symbols-outlined text-base">download_for_offline</span>
@@ -238,7 +238,7 @@ export default function PlannerDashboard() {
                 <button
                   type="button"
                   onClick={() => setShowDispatchModal(true)}
-                  className="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-error-container text-on-error-container font-headline-sm text-body-sm font-semibold hover:bg-error transition-all shadow-md"
+                  className="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl clay-btn-error font-headline-sm text-body-sm font-semibold transition-all shadow-md"
                   id="btn-emergency"
                 >
                   <span className="material-symbols-outlined text-base">emergency_share</span>
@@ -262,10 +262,10 @@ export default function PlannerDashboard() {
               </div>
             )}
 
-            {/* 4 High-Impact Metric Glow Cards */}
+            {/* 4 High-Impact Tactile Clay Metric Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
               {/* Stat 1: Surface Temp Peak */}
-              <div className="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg group hover:bg-surface-container-low transition-all border border-outline-variant/30">
+              <div className="relative overflow-hidden rounded-2xl clay-glow-amber clay-interactive p-space-md flex flex-col justify-between shadow-xl group">
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-secondary-container/20 blur-2xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
                 <div className="flex items-center justify-between z-10">
                   <span className="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">
@@ -294,13 +294,13 @@ export default function PlannerDashboard() {
               </div>
 
               {/* Stat 2: Active Hotspots */}
-              <div className="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg group hover:bg-surface-container-low transition-all border border-outline-variant/30">
+              <div className="relative overflow-hidden rounded-2xl clay-glow-error clay-interactive p-space-md flex flex-col justify-between shadow-xl group">
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-error-container/30 blur-2xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
                 <div className="flex items-center justify-between z-10">
                   <span className="font-label-caps text-label-caps uppercase text-error font-semibold tracking-wider">
                     Active Hotspots
                   </span>
-                  <div className="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-error-container/30 border border-error/40">
+                  <div className="clay-pill-error flex items-center gap-space-2xs py-1">
                     <span className="w-2 h-2 rounded-full bg-error animate-ping" />
                     <span className="font-label-caps text-label-caps text-error font-bold">CRITICAL</span>
                   </div>
@@ -329,7 +329,7 @@ export default function PlannerDashboard() {
               </div>
 
               {/* Stat 3: NDVI Canopy Cover */}
-              <div className="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg group hover:bg-surface-container-low transition-all border border-outline-variant/30">
+              <div className="relative overflow-hidden rounded-2xl clay-glow-primary clay-interactive p-space-md flex flex-col justify-between shadow-xl group">
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-primary-container/20 blur-2xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
                 <div className="flex items-center justify-between z-10">
                   <span className="font-label-caps text-label-caps uppercase text-primary font-semibold tracking-wider">
@@ -357,7 +357,7 @@ export default function PlannerDashboard() {
               </div>
 
               {/* Stat 4: Heat Vulnerability Index */}
-              <div className="relative overflow-hidden rounded-xl bg-surface-container-low/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg group hover:bg-surface-container-low transition-all border border-outline-variant/30">
+              <div className="relative overflow-hidden rounded-2xl clay-glow-amber clay-interactive p-space-md flex flex-col justify-between shadow-xl group">
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-secondary/15 blur-2xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
                 <div className="flex items-center justify-between z-10">
                   <span className="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">
@@ -405,12 +405,12 @@ export default function PlannerDashboard() {
                   {/* Top Map Controls Bar Overlay */}
                   <div className="relative z-20 p-space-md flex flex-wrap items-center justify-between gap-space-sm bg-gradient-to-b from-surface-container-lowest/90 via-surface-container-lowest/50 to-transparent pointer-events-none">
                     {/* Layer Selector Toggles */}
-                    <div className="flex items-center gap-space-2xs p-space-2xs rounded-xl bg-surface-container-high/80 backdrop-blur-xl shadow-md pointer-events-auto border border-outline-variant/30">
+                    <div className="flex items-center gap-space-2xs p-1.5 rounded-2xl clay-inset pointer-events-auto">
                       <button
                         type="button"
                         onClick={() => setShowGreen(false)}
-                        className={`flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-body-sm text-body-sm font-semibold transition-all ${
-                          !showGreen ? 'bg-surface-container text-primary shadow' : 'text-on-surface-variant hover:text-on-surface'
+                        className={`flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-body-sm text-body-sm font-semibold transition-all ${
+                          !showGreen ? 'clay-btn-secondary text-white shadow' : 'text-on-surface-variant hover:text-on-surface'
                         }`}
                       >
                         <span className="material-symbols-outlined text-sm">thermostat</span>
@@ -419,8 +419,8 @@ export default function PlannerDashboard() {
                       <button
                         type="button"
                         onClick={() => setShowGreen(true)}
-                        className={`flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-body-sm text-body-sm font-semibold transition-all ${
-                          showGreen ? 'bg-surface-container text-primary shadow' : 'text-on-surface-variant hover:text-on-surface'
+                        className={`flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-body-sm text-body-sm font-semibold transition-all ${
+                          showGreen ? 'clay-btn-primary text-white shadow' : 'text-on-surface-variant hover:text-on-surface'
                         }`}
                       >
                         <span className="material-symbols-outlined text-sm">nature</span>
@@ -429,7 +429,7 @@ export default function PlannerDashboard() {
                     </div>
 
                     {/* Live Refresh State & Telemetry Health */}
-                    <div className="flex items-center gap-space-sm bg-surface-container-high/80 backdrop-blur-xl px-space-sm py-space-xs rounded-lg shadow-sm pointer-events-auto border border-outline-variant/30">
+                    <div className="flex items-center gap-space-sm glass px-space-sm py-space-xs rounded-lg shadow-sm pointer-events-auto">
                       <div className="flex items-center gap-space-xs">
                         <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         <span className="font-label-mono-stat text-label-mono-stat text-on-surface font-semibold">
@@ -446,7 +446,7 @@ export default function PlannerDashboard() {
                   {/* Bottom Floating Hotspot Inspection Card Overlay */}
                   <div className="relative z-20 p-space-md flex flex-col md:flex-row items-end justify-between gap-space-md bg-gradient-to-t from-surface-container-lowest/95 via-surface-container-lowest/40 to-transparent pointer-events-none">
                     {/* Hotspot Inspection Card */}
-                    <div className="w-full md:w-96 rounded-xl bg-surface-container-high/95 backdrop-blur-2xl p-space-md shadow-2xl flex flex-col gap-space-sm transition-all duration-300 pointer-events-auto border border-outline-variant/40">
+                    <div className="w-full md:w-96 rounded-xl glass-strong p-space-md shadow-2xl flex flex-col gap-space-sm transition-all duration-300 pointer-events-auto">
                       <div className="flex items-start justify-between">
                         <div>
                           <span className="font-label-caps text-label-caps text-error uppercase font-bold tracking-wider">
@@ -527,7 +527,7 @@ export default function PlannerDashboard() {
                 </div>
 
                 {/* GIS Auxiliary Strip: Thermal Isobar Timeline */}
-                <div className="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-space-md shadow-md border border-outline-variant/30">
+                <div className="p-space-md rounded-xl glass flex flex-col md:flex-row items-center justify-between gap-space-md shadow-md">
                   <div className="flex items-center gap-space-sm">
                     <span className="material-symbols-outlined text-secondary text-2xl">history_toggle_off</span>
                     <div>
@@ -575,7 +575,7 @@ export default function PlannerDashboard() {
               {/* Live Incident Command Sidebar (4 cols) */}
               <div className="lg:col-span-4 flex flex-col gap-space-md">
                 {/* Header Card */}
-                <div className="p-space-md rounded-xl bg-surface-container-low/80 backdrop-blur-xl shadow-lg flex items-center justify-between border border-outline-variant/30">
+                <div className="p-space-md rounded-xl glass shadow-lg flex items-center justify-between">
                   <div className="flex items-center gap-space-sm">
                     <div className="relative flex items-center justify-center p-space-xs rounded-lg bg-error-container/30 text-error">
                       <span className="material-symbols-outlined text-xl">farsight_digital</span>
@@ -612,7 +612,7 @@ export default function PlannerDashboard() {
                       return (
                         <div
                           key={alert._id || index}
-                          className="relative overflow-hidden rounded-xl bg-surface-container-low/90 backdrop-blur-xl p-space-md shadow-xl transition-all duration-300 hover:bg-surface-container-high group border border-outline-variant/30"
+                          className="relative overflow-hidden rounded-xl glass p-space-md shadow-xl transition-all duration-300 hover:brightness-105 group"
                         >
                           <div
                             className={`absolute left-0 top-0 bottom-0 w-1.5 ${
@@ -666,7 +666,7 @@ export default function PlannerDashboard() {
                             <button
                               type="button"
                               onClick={() => handleTriggerAction(alert._id, 'Misting Cannons Activated')}
-                              className="px-space-sm py-space-xs rounded-lg bg-primary text-on-primary font-headline-sm text-xs font-semibold hover:bg-primary-fixed hover:shadow-lg transition-all flex items-center justify-center gap-1"
+                              className="px-space-sm py-space-xs rounded-xl clay-btn-primary text-white font-headline-sm text-xs font-semibold transition-all flex items-center justify-center gap-1"
                             >
                               <span className="material-symbols-outlined text-sm">water_drop</span>
                               <span>{isDone === 'Misting Cannons Activated' ? 'Dispatched ✓' : 'Deploy Misting'}</span>
@@ -674,7 +674,7 @@ export default function PlannerDashboard() {
                             <button
                               type="button"
                               onClick={() => handleTriggerAction(alert._id, 'EMS Health Dispatch Sent')}
-                              className="px-space-sm py-space-xs rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-xs font-semibold hover:bg-error-container hover:text-on-error-container transition-all flex items-center justify-center gap-1"
+                              className="px-space-sm py-space-xs rounded-xl clay-btn-surface text-on-surface font-headline-sm text-xs font-semibold transition-all flex items-center justify-center gap-1"
                             >
                               <span className="material-symbols-outlined text-sm">notifications_active</span>
                               <span>{isDone === 'EMS Health Dispatch Sent' ? 'Notified ✓' : 'Notify EMS'}</span>
@@ -694,11 +694,11 @@ export default function PlannerDashboard() {
       {/* Emergency Dispatch Protocol Modal */}
       {showDispatchModal && (
         <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-surface-container max-w-lg w-full rounded-2xl border border-error/50 p-6 shadow-2xl relative">
+          <div className="clay-card clay-glow-error max-w-lg w-full p-6 shadow-2xl relative">
             <button
               type="button"
               onClick={() => setShowDispatchModal(false)}
-              className="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface"
+              className="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface text-lg"
             >
               ✕
             </button>
@@ -729,14 +729,14 @@ export default function PlannerDashboard() {
               <button
                 type="button"
                 onClick={handleEmergencyDispatch}
-                className="py-2.5 px-3 rounded-xl bg-error text-on-error font-bold text-xs hover:bg-error-container hover:text-on-error-container transition-all"
+                className="py-2.5 px-3 rounded-xl clay-btn-error font-bold text-xs"
               >
                 🚨 Execute Protocol
               </button>
               <button
                 type="button"
                 onClick={() => setShowDispatchModal(false)}
-                className="py-2.5 px-3 rounded-xl bg-surface-container-high text-on-surface font-bold text-xs hover:bg-surface-container-highest transition-all"
+                className="py-2.5 px-3 rounded-xl clay-btn-surface text-on-surface font-bold text-xs"
               >
                 Cancel
               </button>
